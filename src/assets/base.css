@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap');
 
 /* semantic color variables for this project */
 :root {
@@ -40,6 +40,40 @@ h3, .h3 {
   font-size: 1.4em;
 }
 
+h4, .h4, .subHeading {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #0C0F0A;
+  margin-bottom: .5rem;
+}
+
+
+@media(min-width: 720px) {
+  h1, .h1 {
+    font-size: 2.5em;
+  }
+  h2, .h2 {
+    font-size: 2em;
+  }
+  h3, .h3 {
+    font-size: 1.4em;
+  }
+  h4, .h4, .subHeading {
+    font-size: 1.8em;
+  }
+  
+  p {
+    font-size: 1.4em;
+  }
+  
+
+}
 
 h1, h2, h3, h4 {
   color: #F4B942;
@@ -48,17 +82,8 @@ h1, h2, h3, h4 {
   margin-bottom: .5rem;
 }
 
-h4, .h4, .subHeading {
-  font-size: 1.2em;
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
 
-p {
-  font-weight: 400;
-  color: #0C0F0A;
-  margin-bottom: .5rem;
-}
+
 
 a {
   text-decoration: none;

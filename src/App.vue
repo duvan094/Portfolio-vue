@@ -29,7 +29,7 @@ import { RouterLink, RouterView } from 'vue-router'
       width: 100%;
       max-width: 1080px;
       margin: auto;
-      padding: 1rem;
+      padding: 1rem 2rem;
 
       nav {
         display: flex;
@@ -39,13 +39,16 @@ import { RouterLink, RouterView } from 'vue-router'
   }
 
   main {
-    margin: auto;
-    width: 100%;
-    max-width: 720px;
-
     display:flex;
     flex-direction: column;
     justify-content: center;
+    min-height: calc(100vh - 88px);
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    width: 100%;
+    max-width: 720px;
+
+
 
     animation: .5s ease-out reveal;
 
@@ -61,6 +64,7 @@ import { RouterLink, RouterView } from 'vue-router'
   }
 
   footer {
+    padding: 2rem;
     text-align: center;
   }
 

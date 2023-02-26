@@ -5,7 +5,7 @@
   <main>
     <section>
       <h1>Welcome to my site!</h1>
-      <h4>I'm a frontend developer currently living in Jönköping. This is just a site for fun.</h4>
+      <h4>I'm a frontend developer currently living in Jönköping, Sweden. This is just a site for fun.</h4>
       <p>It is still a work in progress but I will use this site to gather links to hobby projects I've been working on.</p>
     </section>
     <section>
