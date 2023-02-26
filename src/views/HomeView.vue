@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div>
+  <main>
     <section>
       <h1>Welcome to my site!</h1>
       <h4>I'm a frontend developer currently living in Jönköping, Sweden. This is just a site for fun.</h4>
@@ -14,5 +14,5 @@
         <li><a href="https://aoe2.jacobduvander.se" target="_blank">AoE2 Soundboard</a></li>
       </ul>
     </section>
-  </div>
+  </main>
 </template>

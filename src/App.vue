@@ -11,9 +11,9 @@ import { RouterLink, RouterView } from 'vue-router'
       </nav>
     </div>
   </header>
-  <main>
+  <div class="page-wrapper">
     <RouterView />
-  </main>
+  </div>
   <footer>
     Jacob Duvander © {{ new Date().getFullYear()}}
   </footer>
@@ -41,7 +41,7 @@ import { RouterLink, RouterView } from 'vue-router'
     }
   }
 
-  main {
+  .page-wrapper{
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -50,9 +50,9 @@ import { RouterLink, RouterView } from 'vue-router'
     padding: 6rem 2rem;
     width: 100%;
     max-width: 720px;
+  }
 
-
-
+  main {
     animation: .5s ease-out reveal;
 
     @keyframes reveal {

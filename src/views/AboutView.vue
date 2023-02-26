@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <main>
     <section>
       <div class="profile">
         <RoundPicture imageLink="profile.jpg"/>
@@ -15,7 +15,7 @@
         <li><a href="https://www.linkedin.com/in/jacobduvander/" target="_blank">LinkedIn</a></li>
       </ul>
     </section>
-  </div>
+  </main>
 </template>
 
 <script setup>
