@@ -13,7 +13,7 @@ import { RouterLink, RouterView } from 'vue-router'
   </header>
   <RouterView />
   <footer>
-    Jacob Duvander
+    Jacob Duvander © {{ new Date().getFullYear()}}
   </footer>
 </template>
 
@@ -44,7 +44,20 @@ import { RouterLink, RouterView } from 'vue-router'
     max-width: 720px;
     min-height: 720px;
     display:flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    animation: .5s ease-out reveal;
+
+    @keyframes reveal {
+      0%{
+        opacity: 0;
+      }
+      100%{
+        opacity: 1;
+      }
+    }
+
   }
 
   footer {
