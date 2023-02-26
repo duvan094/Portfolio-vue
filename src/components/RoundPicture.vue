@@ -49,10 +49,12 @@
         box-shadow: -1px 10px 30px -10px rgba(0,0,0,0.75);
 
         opacity: 0;
-        transition: .2s ease-out opacity;
+        transform: scale(.8) translateY(10%);
+        transition: .2s ease-out opacity, .5s ease-out transform;
 
         &.loaded{
           opacity: 1;
+          transform: scale(1) translateY(0);
         }
 
   
