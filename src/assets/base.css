@@ -14,6 +14,16 @@
   font-weight: normal;
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: #FAFFFD;
+  background: #0C0F0A;
+}
+
+::selection {
+  color: #FAFFFD;
+  background: #0C0F0A;
+}
+
 body {
   min-height: 100vh;
   line-height: 1.6;
