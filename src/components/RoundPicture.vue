@@ -1,7 +1,7 @@
 <template>
     <div class="img">
-        <div class="img-wrapper">
-        <img :src="imageLink" />
+        <div class="img-wrapper" :class="{'loaded': revealImg}">
+          <img :src="imageLink" />
         </div>
     </div>
 </template>
@@ -13,6 +13,20 @@
             imageLink: {
                 type: String
             }
+        },
+        data() {
+          return {
+            revealImg: false
+          }
+        },
+        mounted() {
+          const img = new Image()
+          img.src = this.imageLink
+
+          img.onload = ()=>{
+            this.revealImg = true
+          }
+
         }
     }
 
@@ -33,6 +47,14 @@
   
         overflow: hidden;
         box-shadow: -1px 10px 30px -10px rgba(0,0,0,0.75);
+
+        opacity: 0;
+        transition: .2s ease-out opacity;
+
+        &.loaded{
+          opacity: 1;
+        }
+
   
         img {
           position: absolute;
