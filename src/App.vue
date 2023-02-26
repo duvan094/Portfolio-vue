@@ -11,7 +11,9 @@ import { RouterLink, RouterView } from 'vue-router'
       </nav>
     </div>
   </header>
-  <RouterView />
+  <main>
+    <RouterView />
+  </main>
   <footer>
     Jacob Duvander © {{ new Date().getFullYear()}}
   </footer>
