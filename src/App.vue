@@ -42,7 +42,7 @@ import { RouterLink, RouterView } from 'vue-router'
     margin: auto;
     width: 100%;
     max-width: 720px;
-    min-height: 720px;
+
     display:flex;
     flex-direction: column;
     justify-content: center;
