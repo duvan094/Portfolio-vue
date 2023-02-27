@@ -11,6 +11,7 @@
         <RouterLink @click="this.menuToggled = false" to="/">Home</RouterLink>
         <RouterLink @click="this.menuToggled = false" to="/about">About me</RouterLink>
       </nav>
+      <div class="background"></div>
     </div>
   </header>
 </template>
@@ -68,14 +69,25 @@ export default {
       top:0;
       left:0;
       z-index: 100;
-      background: #508484;
       padding: 2rem;
-      opacity: 0;
-      transition: .2s ease-out opacity;
       pointer-events: none;
-      &.visible {
-        opacity: 1;
-        pointer-events: all;
+
+      .background {
+        position: fixed;
+        background: #508484;
+        border-radius: 50%;
+        width: 200vh;
+        height: 200vh;
+        overflow: hidden;
+
+        @media(min-width: 100vh) {
+          width: 150vw;
+          height: 150vw;
+        }
+
+        transform: scale(0);
+        transition: .4s ease-out transform;
+        transform-origin: top right;
       }
 
       nav {
@@ -84,6 +96,11 @@ export default {
         gap: 1rem;
         max-width: 720px;
         width: 100%;
+        z-index: 1;
+        opacity: 0;
+        transition: .2s ease-out opacity;
+        transition-delay: 0s;
+
         a {
           color: #FAFFFD;
           font-size: 2em;
@@ -92,6 +109,17 @@ export default {
             font-size: 4em;
           }
           
+        }
+      }
+      &.visible {
+        opacity: 1;
+        pointer-events: all;
+        nav {
+          opacity: 1;
+          transition-delay: .2s;
+        }
+        .background {
+          transform: scale(1);
         }
       }
     }
