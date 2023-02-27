@@ -1,16 +1,10 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
+import MainHeader from './components/MainHeader.vue'
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About me</RouterLink>
-      </nav>
-    </div>
-  </header>
+  <MainHeader />
   <div class="page-wrapper">
     <RouterView />
   </div>
@@ -20,27 +14,6 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style scoped lang="scss">
-
-  header {
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    .wrapper {
-      width: 100%;
-      max-width: 1080px;
-      margin: auto;
-      padding: 1rem 2rem;
-
-      nav {
-        display: flex;
-        gap: 1rem;
-      }
-    }
-  }
-
   .page-wrapper{
     display:flex;
     flex-direction: column;
