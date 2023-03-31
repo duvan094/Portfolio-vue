@@ -11,13 +11,13 @@
       <p>I am primarly a JavaScript developer and am used to working with frameworks such as Vue and React, but I also have experience with CMS (Content Managing Systems), like Wordpress.</p>
       <p>In my spare time, I'm interested in photography, taking care of my plants, and running, as well the occasional beer brewing.</p>
     </section>
-    <ExpandableSection title="Developer tools" text="HTML, CSS, SCSS, Vue, React, Node.js, TypeScript, WordPress, PHP , Git."/>
+    <ExpandableSection title="Developer tools" text="HTML, CSS, SCSS, JavaScript, Vue, React, Node.js, TypeScript, WordPress, PHP, Git."/>
     <ExpandableSection title="UX/UI tools" text="Figma (Adobe XD, Sketch), Adobe Photoshop / Illustrator / InDesign."/>
     <section>
       <h2>Socials</h2>
       <p>Feel free to reach out to me on social media.</p>
       <ul>
-        <li><a href="mailto:jacobduvander@gmail.com">Email</a></li>
+        <li><ExternalLink title="Email" link="mailto:jacobduvander@gmail.com" :email="true"/></li>
         <li><ExternalLink title="Github" link="https://github.com/duvan094"/></li>
         <li><ExternalLink title="LinkedIn" link="https://www.linkedin.com/in/jacobduvander/"/></li>
       </ul>

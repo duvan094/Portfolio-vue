@@ -1,17 +1,20 @@
 <template>
     <a :href="link" target="_blank" class="external-link">
-        <HyperLinkIcon />
+        <EmailIcon v-if="email"/>
+        <HyperLinkIcon v-else/>
         {{ title }}
     </a>
 </template>
   
   <script>
   import HyperLinkIcon from './icons/HyperLinkIcon.vue';
-  
+  import EmailIcon from './icons/EmailIcon.vue';
+
   export default {
     name: 'MainHeader',
     components: {
         HyperLinkIcon,
+        EmailIcon
     },
     props: {
         link: {
@@ -19,6 +22,10 @@
         },
         title: {
             type: String
+        },
+        email: {
+            type: Boolean,
+            default: false
         }
     }
 
