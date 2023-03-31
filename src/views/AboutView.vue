@@ -12,7 +12,7 @@
       <p>In my spare time, I'm interested in photography, taking care of my plants, and running, as well the occasional beer brewing.</p>
     </section>
     <ExpandableSection title="Developer tools" text="HTML, CSS, SCSS, JavaScript, Vue, React, Node.js, TypeScript, WordPress, PHP, Git."/>
-    <ExpandableSection title="UX/UI tools" text="Figma (Adobe XD, Sketch), Adobe Photoshop / Illustrator / InDesign."/>
+    <ExpandableSection title="UX/UI tools" text="Figma (Adobe XD, Sketch), Adobe Photoshop/Illustrator/InDesign."/>
     <section>
       <h2>Socials</h2>
       <p>Feel free to reach out to me on social media.</p>
