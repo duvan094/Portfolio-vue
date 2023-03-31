@@ -7,7 +7,7 @@ import ScrollToContent from './components/ScrollToContent.vue'
 <template>
   <ScrollToContent />
   <MainHeader />
-  <div class="page-wrapper" id="main">
+  <div class="page-wrapper">
     <RouterView />
   </div>
   <footer>

@@ -1,21 +1,32 @@
 <template>
     <div class="container">
         <div tabindex="-1" ref="skipLink" class="skip-link-wrapper">
-            <a href="#main" tabindex="0" class="skip-link">Scroll to Content</a>
+            <a :href="scrollId" tabindex="0" class="skip-link" ref="link" @click="scrollDown">Scroll to Content</a>
         </div>
     </div>
 </template>
   
   <script>
-  
+
   export default {
     name: 'ScrollToContent',
-    components: {
-      
+    data() {
+        return {
+            scrollElement: null
+        }
     },
     watch: {
         $route() {
             this.$refs.skipLink.focus()
+
+            this.$nextTick(() => {
+                this.scrollElement = document.querySelector('h1')
+            });
+        }
+    },
+    computed: {
+        scrollId(){
+            return '#' + this.scrollElement?.id
         }
     },
   }

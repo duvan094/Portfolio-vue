@@ -4,7 +4,7 @@
       <div class="profile">
         <RoundPicture imageLink="profile.jpg" altText="Profile picture of me"/>
       </div>
-      <h1>About me</h1>
+      <h1 tabindex="-1" id="about-me">About me</h1>
       <p>I'm a UX focused frontend developer from Gothenburg, currently living in Jönköping, Sweden.</p>
       <p>Currently I work as a System developer at Zmarta where I mainly do frontend work, but occasionally some backend sprinkled here and there.</p>
       <p>Previously I've studied Graphic design and Web development at Jönköping University, where I graduated from in summer of 2019.</p>
