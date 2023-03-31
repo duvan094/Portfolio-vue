@@ -87,6 +87,7 @@ export default {
         }
 
         transform: scale(0);
+        will-change: transform;
         transition: .4s ease-out transform;
         transform-origin: top right;
       }
@@ -153,6 +154,7 @@ export default {
         background-color: #0C0F0A;
         transform-origin: center;
         top: 50%;
+        will-change: transform;
         transition: .2s ease-out transform, .2s ease-out background-color; 
         
         &:first-child {

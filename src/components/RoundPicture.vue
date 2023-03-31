@@ -54,6 +54,7 @@
 
         opacity: 0;
         transform: scale(.8) translateY(10%);
+        will-change: transform, opacity;
         transition: .2s ease-out opacity, .5s ease-out transform;
 
         &.loaded{

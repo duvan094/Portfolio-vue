@@ -62,7 +62,6 @@
             opacity: 1;
             pointer-events: all;
         }
-    
     }
   
   </style>

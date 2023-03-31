@@ -85,6 +85,7 @@ export default {
 
             &::after {
                 transition: .2s ease transform;
+                will-change: transform;
                 transform: translate(-50%,-50%) rotate(-90deg);
             }
         }
