@@ -8,8 +8,8 @@
     </div>
     <div class="nav" :class="{'visible': menuToggled}">
       <nav>
-        <RouterLink @click="this.menuToggled = false" to="/">Home</RouterLink>
-        <RouterLink @click="this.menuToggled = false" to="/about">About me</RouterLink>
+        <RouterLink tabindex="0" @click="this.menuToggled = false" to="/">Home</RouterLink>
+        <RouterLink tabindex="0" @click="this.menuToggled = false" to="/about">About me</RouterLink>
       </nav>
       <div class="background"></div>
     </div>
@@ -42,6 +42,7 @@ export default {
 <style lang="scss" scoped>
     header {
       position: fixed;
+      pointer-events: none;
       z-index: 1000;
       top: 0;
       left: 0;
@@ -93,6 +94,7 @@ export default {
       nav {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
         gap: 1rem;
         max-width: 720px;
         width: 100%;
@@ -104,6 +106,14 @@ export default {
         a {
           color: #FAFFFD;
           font-size: 2em;
+
+          &:before {
+            background-color: #FAFFFD;
+          }
+
+          &:after {
+            border: 3px solid #FAFFFD;
+          }
 
           @media (min-width: 720px) {
             font-size: 4em;
@@ -156,6 +166,9 @@ export default {
 
 
       &.toggled {
+        &:after {
+          border: 3px solid #FAFFFD;
+        }
         span {
           background-color: #FAFFFD;
           &:first-child {

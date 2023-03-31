@@ -51,10 +51,11 @@ h1, .h1 {
   font-size: 2.1em;
 }
 h2, .h2 {
-  font-size: 1.6em;
+  font-size: 1.8em;
 }
 h3, .h3 {
-  font-size: 1.4em;
+  font-size: 1.6em;
+  font-weight: 600;
 }
 
 h4, .h4, .subHeading {
@@ -70,16 +71,70 @@ p {
   margin-bottom: .5rem;
 }
 
+b {
+  font-weight: 600;
+}
+
+ul > li {
+  list-style: none;
+  margin-bottom: .3em;
+}
+
+ul > li:last-child {
+  margin-bottom: 0;
+}
+
+
+ul > li::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  transform: translateY(-50%);
+  width: .4rem;
+  height: .4rem;
+  background: #0C0F0A;
+  border-radius: 50%;
+}
 
 a {
+  position: relative;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.2em;
   color: #508484;
+  outline: none;
 }
 
+a:before {
+  content: '';
+  display: block;
+  width: 100%;
+  min-height: 2px;
+  height: 0.09em;
+  background-color: #508484;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  will-change: transform;
+  transform: scaleX(0);
+  transition: .2s ease transform;
+  transform-origin: left;
+}
 
-
+a:after, button:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  left: -10px;
+  right: -10px;
+  border-radius: 3px;
+  border: 3px solid #508484;
+  opacity: 0;
+  transition: .1s ease-out opacity;
+}
 
 @media(min-width: 720px) {
   h1, .h1 {
@@ -89,10 +144,10 @@ a {
     font-size: 2em;
   }
   h3, .h3 {
-    font-size: 1.4em;
+    font-size: 1.8em;
   }
   h4, .h4, .subHeading {
-    font-size: 1.8em;
+    font-size: 1.6em;
   }
   
   p, a {
@@ -101,7 +156,12 @@ a {
 }
 
 @media (hover: hover) {
-  a:hover {
-    text-decoration: underline;
+  a:hover:before {
+    transform: scaleX(1);
   }
+
+  a:focus-visible:after, button:focus-visible:after {
+    opacity: 1; 
+  }
+
 }

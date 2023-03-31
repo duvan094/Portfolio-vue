@@ -1,11 +1,13 @@
 <script setup>
 import { RouterView } from 'vue-router'
 import MainHeader from './components/MainHeader.vue'
+import ScrollToContent from './components/ScrollToContent.vue'
 </script>
 
 <template>
+  <ScrollToContent />
   <MainHeader />
-  <div class="page-wrapper">
+  <div class="page-wrapper" id="main">
     <RouterView />
   </div>
   <footer>

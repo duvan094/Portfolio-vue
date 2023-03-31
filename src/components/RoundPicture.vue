@@ -1,7 +1,7 @@
 <template>
     <div class="img">
         <div class="img-wrapper" :class="{'loaded': revealImg}">
-          <img :src="imageLink" />
+          <img :src="imageLink" :alt="altText"/>
         </div>
     </div>
 </template>
@@ -12,6 +12,10 @@
         props: {
             imageLink: {
                 type: String
+            },
+            altText: {
+              type: String,
+              default: ""
             }
         },
         data() {

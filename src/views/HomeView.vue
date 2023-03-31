@@ -1,4 +1,5 @@
 <script setup>
+import ExternalLink from '../components/ExternalLink.vue'
 </script>
 
 <template>
@@ -11,7 +12,7 @@
     <section>
       <h2>Projects</h2>
       <ul>
-        <li><a href="https://aoe2.jacobduvander.se" target="_blank">AoE2 Soundboard</a></li>
+        <li><ExternalLink title="AoE2 Soundboard" link="https://aoe2.jacobduvander.se"/></li>
       </ul>
     </section>
   </main>

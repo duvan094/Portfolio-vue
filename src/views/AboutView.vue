@@ -2,23 +2,32 @@
   <main>
     <section>
       <div class="profile">
-        <RoundPicture imageLink="profile.jpg"/>
+        <RoundPicture imageLink="profile.jpg" altText="Profile picture of me"/>
       </div>
       <h1>About me</h1>
-      <p>This is a description of me as a person. Hope you learned something!</p>
+      <p>I'm a UX focused frontend developer from Gothenburg, currently living in Jönköping, Sweden.</p>
+      <p>Currently I work as a System developer at Zmarta where I mainly do frontend work, but occasionally some backend sprinkled here and there.</p>
+      <p>Previously I've studied Graphic design and Web development at Jönköping University, where I graduated from in summer of 2019.</p>
+      <p>I am primarly a JavaScript developer and am used to working with frameworks such as Vue and React, but I also have experience with CMS (Content Managing Systems), like Wordpress.</p>
+      <p>In my spare time, I'm interested in photography, taking care of my plants, and running, as well the occasional beer brewing.</p>
     </section>
+    <ExpandableSection title="Developer tools" text="HTML, CSS, SCSS, Vue, React, Node.js, TypeScript, WordPress, PHP , Git."/>
+    <ExpandableSection title="UX/UI tools" text="Figma (Adobe XD, Sketch), Adobe Photoshop / Illustrator / InDesign."/>
     <section>
       <h2>Socials</h2>
+      <p>Feel free to reach out to me on social media.</p>
       <ul>
         <li><a href="mailto:jacobduvander@gmail.com">Email</a></li>
-        <li><a href="https://github.com/duvan094" target="_blank">Github</a></li>
-        <li><a href="https://www.linkedin.com/in/jacobduvander/" target="_blank">LinkedIn</a></li>
+        <li><ExternalLink title="Github" link="https://github.com/duvan094"/></li>
+        <li><ExternalLink title="LinkedIn" link="https://www.linkedin.com/in/jacobduvander/"/></li>
       </ul>
     </section>
   </main>
 </template>
 
 <script setup>
+import ExternalLink from '../components/ExternalLink.vue'
+import ExpandableSection from '../components/ExpandableSection.vue';
 import RoundPicture from '../components/RoundPicture.vue'
 </script>
 
