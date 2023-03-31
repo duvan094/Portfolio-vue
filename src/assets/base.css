@@ -38,7 +38,7 @@ body {
 }
 
 section {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 h1, h2, h3, h4 {
@@ -69,7 +69,11 @@ p {
   font-size: 1.2em;
   font-weight: 400;
   color: #0C0F0A;
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }
 
 b {
