@@ -1,12 +1,12 @@
 <template>
     <div class="expandable-section" :class="{'toggled': sectionToggled}">
-        <button class="expand-button" @click="sectionToggled = !sectionToggled">
+        <button class="expand-button" @click="toggleSection()">
             {{ title }}
             <div class="expand-icon">
             </div>
         </button>
-        <div class="content-container">
-            <div class="content">
+        <div class="content-container" ref="contentContainer" :style="{ 'height': this.contentHeight + 'px' }">
+            <div class="content" ref="content">
                 <p>{{ text }}</p>
             </div>
         </div>
@@ -20,7 +20,8 @@ export default {
     name: 'ExpandableSection',
     data(){
         return {
-            sectionToggled: false
+            sectionToggled: false,
+            contentHeight: 0,
         }
     },
     props: {
@@ -29,6 +30,17 @@ export default {
         },
         text: {
             type: String,
+        }
+    },
+    methods: {
+        toggleSection() {
+            this.sectionToggled = !this.sectionToggled
+
+            if(this.sectionToggled) {
+                this.contentHeight = this.$refs.content.offsetHeight;
+            } else {
+                this.contentHeight = 0;
+            }
         }
     }
 }
@@ -93,9 +105,10 @@ export default {
 
     .content-container {
         overflow: hidden;
-        transition: .4s ease-out max-height, .3s ease-out opacity;
+        will-change: height, opacity;
+        transition: .3s ease-out height, .3s ease-out opacity;
         opacity: 0;
-        max-height: 0;
+        height: 0;
         background-color: #f8f8f8;
 
         .content {
@@ -118,7 +131,6 @@ export default {
         }
 
         .content-container {
-            max-height: 300px;
             opacity: 1;
         }
     }
