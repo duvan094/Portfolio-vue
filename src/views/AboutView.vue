@@ -4,7 +4,8 @@
       <div class="profile">
         <RoundPicture imageLink="profile.jpg" altText="Profile picture of me"/>
       </div>
-      <h1 tabindex="-1" id="about-me">Hello there, I'm&nbsp;Jacob.</h1>
+      <h1 tabindex="-1" id="about-me" class="animate-text">
+        <span>Hello there,</span> <span>I'm&nbsp;Jacob.</span></h1>
       <p>I'm a UX focused frontend developer from Gothenburg, currently living in Jönköping, Sweden.</p>
       <p>Currently I work as a System developer at Zmarta where I mainly do frontend work, but occasionally some backend sprinkled here and there.</p>
       <p>Previously I've studied Graphic design and Web development at Jönköping University, where I graduated from in summer of 2019.</p>
@@ -37,5 +38,35 @@ import RoundPicture from '../components/RoundPicture.vue'
     justify-content: center;
     margin-bottom: 2rem;
   }
+
+  .animate-text {
+    span {
+      display: inline-block;
+      font-family: inherit;
+      font-weight: inherit;
+      font-size: inherit;
+      will-change: transform, opacity;
+    }
+    @for $i from 0 through 10 {
+      span:nth-child(#{$i+1}) {
+        opacity: 0;
+        transform: translateY(3rem);
+        animation: 1s ease reveal calc($i * 1s + .5s);
+        animation-fill-mode: forwards;
+      }
+    }
+
+    @keyframes reveal {
+      0%{
+        opacity: 0;
+        transform: translateY(1rem);
+      }
+      100%{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
 
 </style>
