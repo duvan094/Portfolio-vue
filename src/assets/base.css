@@ -35,6 +35,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #272838;
   background-color: #FAFFFD;
+  overflow-x: hidden;
 }
 
 section {
@@ -115,16 +116,20 @@ ul > li::before {
   border-radius: 50%;
 }
 
-a {
+a, .button {
   position: relative;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.2em;
   color: #508484;
   outline: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
-a:before {
+a:before, .button:before {
   content: '';
   display: block;
   width: 100%;
@@ -174,12 +179,11 @@ a:after, button:after {
 }
 
 @media (hover: hover) {
-  a:hover:before {
+  a:hover:before, .button:hover:before{
     transform: scaleX(1);
   }
 
   a:focus-visible:after, button:focus-visible:after {
     opacity: 1; 
   }
-
 }
