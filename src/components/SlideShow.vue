@@ -2,7 +2,9 @@
     <div class="container">
         <div class="slide-container" ref="slideContainer">
             <div class="slide" :class="{ active: index === activeSlide }" v-for="(slide, index) in slides" :key="index">
-                <div class="content"><h1>{{ slide.text }}</h1></div>
+                <div class="content">
+                    <img :src="slide.src" />
+                </div>
             </div>
         </div>
         <div class="button-container">
@@ -25,15 +27,15 @@
             activeSlide: 0,
             slides: [
                 {
-                    src: '',
+                    src: 'slide-1.jpg',
                     text: '1'
                 },
                 {
-                    src: '',
+                    src: 'slide-4.jpg',
                     text: '2'
                 },
                 {
-                    src: '',
+                    src: 'slide-3.jpg',
                     text: '3'
                 },
             ]
@@ -77,7 +79,7 @@
             width: 100%;
             height: 100%;
             background: #f2f2f2;
-            border-radius: .5rem;
+            border-radius: .3rem;
             overflow: hidden;
             box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.55);
             box-shadow: 0 6px 20px rgba(0,0,0,0.15), 0 2px 6px rgba(0,0,0,0.2);
@@ -86,6 +88,7 @@
             opacity: 0;
             animation: backward 0.5s;
             animation-fill-mode: forwards;
+
             &.active {
                 transform: translate(0,0);
                 opacity: 1;
@@ -158,7 +161,12 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%) scale(1.5);
+        width: 100%;
+        transform: translate(-50%,-50%);
+
+        img {
+            width: 100%;
+        }
     }
     .button-container {
         display: flex;
