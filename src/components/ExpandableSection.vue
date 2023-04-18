@@ -69,6 +69,7 @@ export default {
         cursor: pointer;
         transition: .2s ease background-color;
         border-left: 5px solid #508484;
+        background-color: #f8f8f8;
         z-index: 10;
 
         @media(min-width: 720px) {
@@ -76,7 +77,7 @@ export default {
         }
 
         &:hover {
-            background-color: #f2f2f2;
+            background-color: #f4f4f4;
         }
 
         .expand-icon {

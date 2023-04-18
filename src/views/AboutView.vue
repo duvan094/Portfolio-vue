@@ -18,11 +18,11 @@
     <section>
       <h2>Socials</h2>
       <p>Feel free to reach out to me on social media.</p>
-      <ul>
-        <li><ExternalLink title="Email" link="mailto:jacobduvander@gmail.com" :email="true"/></li>
-        <li><ExternalLink title="Github" link="https://github.com/duvan094"/></li>
-        <li><ExternalLink title="LinkedIn" link="https://www.linkedin.com/in/jacobduvander/"/></li>
-      </ul>
+      <div class="socials">
+        <ExternalLink title="Email" link="mailto:jacobduvander@gmail.com" :email="true"/>
+        <ExternalLink title="Github" link="https://github.com/duvan094"/>
+        <ExternalLink title="LinkedIn" link="https://www.linkedin.com/in/jacobduvander/"/>
+      </div>
     </section>
   </main>
 </template>
@@ -69,5 +69,16 @@ import RoundPicture from '../components/RoundPicture.vue'
     }
   }
 
+  .socials {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .5rem;
+
+    @media(min-width: 720px) {
+      flex-direction: row;
+      gap: 2rem;
+    }
+  }
 
 </style>

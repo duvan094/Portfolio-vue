@@ -75,7 +75,9 @@ export default {
 
       .background {
         position: fixed;
-        background: #508484;
+//        background: #508484;
+        background: #508484ee;
+        backdrop-filter: blur(5px);
         border-radius: 50%;
         width: 200vh;
         height: 200vh;
