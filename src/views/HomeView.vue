@@ -11,9 +11,7 @@ import ExternalLink from '../components/ExternalLink.vue'
     </section>
     <section>
       <h2>Projects</h2>
-      <ul>
-        <li><ExternalLink title="AoE2 Soundboard" link="https://aoe2.jacobduvander.se"/></li>
-      </ul>
+      <ExternalLink title="AoE2 Soundboard" link="https://aoe2.jacobduvander.se"/>
     </section>
   </main>
 </template>
