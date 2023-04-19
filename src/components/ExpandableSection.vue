@@ -7,7 +7,8 @@
         </button>
         <div class="content-container" ref="contentContainer" :style="{ 'height': this.contentHeight + 'px' }">
             <div class="content" ref="content">
-                <p>{{ text }}</p>
+                <p v-if="text">{{ text }}</p>
+                <slot></slot>
             </div>
         </div>
 

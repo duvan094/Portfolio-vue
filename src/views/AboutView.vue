@@ -15,6 +15,32 @@
     </section>
     <ExpandableSection title="Developer tools" text="HTML, CSS, SCSS, JavaScript, Vue, React, Node.js, TypeScript, WordPress, PHP, Git."/>
     <ExpandableSection title="UX/UI tools" text="Figma (Adobe XD, Sketch), Adobe Photoshop/Illustrator/InDesign."/>
+    <ExpandableSection title="Experience">
+      <div class="small-text">
+        <div class="content">
+            <p><b>Zmarta</b> · Oct. 2020 - present<br> Working on the Zmarta platform. My work mainly involves frontend work as well as some UX, but occasionally backend.</p>
+          </div>
+          <div class="content">
+            <p><b>Tross</b> · May 2019 - Oct. 2020<br>An advertising agency located in Jönköping. I worked at the web department and projects mainly involved building WordPress themes, but also occasional web apps with React.</p>
+        </div>
+        <div class="content">
+          <p><b>Trustcruit</b> · Jan. 2018 - Sep. 2018<br>An extra job after school hours building a WordPress theme.</p>
+        </div>
+      </div>
+    </ExpandableSection>
+    <ExpandableSection title="Education">
+      <div class="small-text">
+        <div class="content">
+          <p><b>Jönköping University</b> · 2016 - 2019<br>Bachelor degree in informatics. Specilization in Graphic Design and Web development.</p>
+        </div>
+        <div class="content">
+          <p><b>Chalmers University of Technology</b> · 2014 - 2016<br>Software engineering. Programming primarely with Java, but also Assembler and C.</p>
+        </div>
+        <div class="content">
+          <p><b>Lerums Gymnasium</b> · 2010 - 2013<br>Studied a Media Technology program. My first introduction to Adobe collection and web development.</p>
+        </div>
+      </div>
+    </ExpandableSection>
     <section>
       <h2>Socials</h2>
       <p>Feel free to reach out to me on social media.</p>
@@ -79,6 +105,19 @@ import RoundPicture from '../components/RoundPicture.vue'
       flex-direction: row;
       gap: 2rem;
     }
+  }
+
+  .content {
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .small-text p {
+    font-size: 1em;
+    margin-bottom: .5rem;
   }
 
 </style>
