@@ -131,6 +131,10 @@ a, .button {
   padding: 0;
 }
 
+p > a {
+  font-size: inherit;
+} 
+
 a:before, .button:before {
   content: '';
   display: block;
@@ -177,6 +181,10 @@ a:after, button:after {
   
   p, a {
     font-size: 1.4em;
+  }
+
+  p > a {
+    font-size: inherit;
   }
 }
 
