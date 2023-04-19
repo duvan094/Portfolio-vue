@@ -28,6 +28,9 @@ import ScrollToContent from './components/ScrollToContent.vue'
   }
 
   main {
+/*     padding: 3rem 2rem;
+    margin: 0 .5rem; */
+/* 
     animation: .5s ease-out reveal;
 
     @keyframes reveal {
@@ -37,7 +40,7 @@ import ScrollToContent from './components/ScrollToContent.vue'
       100%{
         opacity: 1;
       }
-    }
+    } */
 
   }
 

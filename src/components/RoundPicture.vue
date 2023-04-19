@@ -50,7 +50,7 @@
         width: 100%;
   
         overflow: hidden;
-        box-shadow: 0 6px 20px rgba(0,0,0,0.15), 0 2px 6px rgba(0,0,0,0.2);
+        box-shadow: 0 5px 10px 0 rgba(0,0,0,.15);
 
         opacity: 0;
         transform: scale(.8) translateY(10%);

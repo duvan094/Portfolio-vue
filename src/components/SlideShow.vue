@@ -71,7 +71,7 @@
     .slide-container {
         position: relative;
         width: 100%;
-        padding-top: 56.2%;
+        padding-top: 62%;
         .slide {
             position:absolute;
             top: 0;

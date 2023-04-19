@@ -34,6 +34,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #272838;
+/*   background-color: #508484; */
   background-color: #FAFFFD;
   overflow-x: hidden;
 }
@@ -122,6 +123,7 @@ a, .button {
   font-weight: 600;
   font-size: 1.2em;
   color: #508484;
+  fill: #508484;
   outline: none;
   cursor: pointer;
   background: none;
@@ -178,6 +180,15 @@ a:after, button:after {
   }
 }
 
+a:hover, .button:hover{
+  color: #2e5050;
+  fill: #2e5050;
+}
+
+a:hover:before, .button:hover:before{
+  background-color: #2e5050;
+}
+
 @media (hover: hover) {
   a:hover:before, .button:hover:before{
     transform: scaleX(1);
@@ -187,3 +198,37 @@ a:after, button:after {
     opacity: 1; 
   }
 }
+
+/* .card {
+  position: relative;
+  background-color: #FAFFFD;
+}
+
+.card::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  background-color: #2e5050;
+  background-color: rgba(0,0,0,0.4);
+  margin-top: 2rem;
+  width: calc(100% - 1rem);
+  height: calc(100% - 1rem);
+}
+
+
+@media(min-width: 720px) {
+  .card {
+    border: none;
+  }
+
+  .card::before {
+    left: 0;
+    transform: translateX(0);
+    margin-left: -1rem;
+    margin-top: 2rem;
+  }
+} */

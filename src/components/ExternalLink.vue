@@ -40,7 +40,7 @@
             position: absolute;
             left: -25px;
             width: 20px;
-            fill: #508484;
+            fill: inherit;
         }
     }  
 

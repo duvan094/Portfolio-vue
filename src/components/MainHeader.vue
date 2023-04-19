@@ -48,6 +48,11 @@ export default {
       left: 0;
       width: 100%;
 
+/*       @media(max-width: 960px) {
+        background-color: #508484; 
+      }
+ */
+
       .wrapper {
         display: flex;
         justify-content: flex-end;
@@ -75,9 +80,7 @@ export default {
 
       .background {
         position: fixed;
-//        background: #508484;
-        background: #508484ee;
-        backdrop-filter: blur(5px);
+        background: #508484;
         border-radius: 50%;
         width: 200vh;
         height: 200vh;
@@ -148,12 +151,22 @@ export default {
       cursor: pointer;
       pointer-events: all;
 
+
+      &:hover {
+          span {
+            background-color:#2e5050;
+          }
+        }
+
       span {
         position: absolute;
         display: block;
         width: 100%;
         height: 3px;
-        background-color: #0C0F0A;
+/*         background-color: #FAFFFD; */
+        background-color: #508484;
+
+
         transform-origin: center;
         top: 50%;
         will-change: transform;
