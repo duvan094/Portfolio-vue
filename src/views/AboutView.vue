@@ -34,7 +34,7 @@
           <p><b>Hype reklambyrå</b> · feb. 2017 - jan. 2018<br>Hype is a student driven nonprofit advertising agency at Jönköping University where I worked as an Art Director.</p>
         </div>
         <div class="content">
-          <p><b>Jönköping University</b> · sep. 2017 - dev. 2017<br>Lab assistant in a Web developing course throughout a semester. Work involved helping students with Wordpress and JavaScript.</p>
+          <p><b>Jönköping University</b> · sep. 2017 - dec. 2017<br>Lab assistant in a Web developing course throughout a semester. Work involved helping students with Wordpress and JavaScript.</p>
         </div>
       </div>
     </ExpandableSection>
