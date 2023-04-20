@@ -31,10 +31,10 @@
           <p><b>Trustcruit</b> · Jan. 2018 - Sep. 2018<br>An extra job after school hours building a WordPress theme.</p>
         </div>
         <div class="content">
-          <p><b>Hype reklambyrå</b> · feb. 2017 - jan. 2018<br>Hype is a student driven nonprofit advertising agency at Jönköping University where I worked as an Art Director.</p>
+          <p><b>Hype reklambyrå</b> · Feb. 2017 - Jan. 2018<br>Hype is a student driven nonprofit advertising agency at Jönköping University where I worked as an Art Director.</p>
         </div>
         <div class="content">
-          <p><b>Jönköping University</b> · sep. 2017 - dec. 2017<br>Lab assistant in a Web developing course throughout a semester. Work involved helping students with Wordpress and JavaScript.</p>
+          <p><b>Jönköping University</b> · Sep. 2017 - Dec. 2017<br>Lab assistant in a Web developing course throughout a semester. Work involved helping students with Wordpress and JavaScript.</p>
         </div>
       </div>
     </ExpandableSection>
