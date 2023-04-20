@@ -1,7 +1,13 @@
 <script setup>
+import { computed } from 'vue'
 import { RouterView } from 'vue-router'
 import MainHeader from './components/MainHeader.vue'
 import ScrollToContent from './components/ScrollToContent.vue'
+
+const emoji = computed(() => {
+  const emojis = ['🌱', '☕', '📷', '🍺']
+  return emojis[Math.floor(Math.random()*emojis.length)]
+})
 </script>
 
 <template>
@@ -11,7 +17,7 @@ import ScrollToContent from './components/ScrollToContent.vue'
     <RouterView />
   </div>
   <footer>
-    Copyright © {{ new Date().getFullYear()}} Jacob Duvander ☕
+    Copyright © {{ new Date().getFullYear()}} Jacob Duvander {{ emoji }}
   </footer>
 </template>
 
