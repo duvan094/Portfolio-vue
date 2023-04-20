@@ -143,41 +143,61 @@ export default {
     .hamburger-btn {
       position: relative;
       padding: 0;
-      width: 45px;
-      height: 45px;
+      width: 50px;
+      height: 50px;
       background: none;
       border: none;
       outline: none;
       cursor: pointer;
       pointer-events: all;
 
+      @media (max-width: 720px) {
+        background-color: #508484EE;
+        transition: .2s ease-out background-color;
 
-      &:hover {
+        span {
+          background-color: #FAFFFD;
+          width: calc(100% - 1rem);
+        }
+
+        &:hover {
+          background-color: #508484ff;
+        }
+      }
+
+      @media (min-width: 720px) {
+        width: 45px;
+        height: 45px;
+
+        span {
+          background-color: #508484;
+          width: 100%;
+        }
+
+        &:hover {
           span {
             background-color:#2e5050;
           }
         }
+      }
 
       span {
         position: absolute;
         display: block;
-        width: 100%;
         height: 3px;
-/*         background-color: #FAFFFD; */
-        background-color: #508484;
-
 
         transform-origin: center;
         top: 50%;
+        left: 50%;
         will-change: transform;
         transition: .2s ease-out transform, .2s ease-out background-color; 
         
         &:first-child {
-          transform: translate(0, -200%);
+          transform: translate(-50%, -200%);
         }
 
         &:last-child {
-          transform: translate(0, 200%);
+          transform: translate(-50%, 200%);
         }
       }
 
@@ -189,11 +209,11 @@ export default {
         span {
           background-color: #FAFFFD;
           &:first-child {
-            transform: translate(0, 0) rotate(45deg);
+            transform: translate(-50%, 0) rotate(45deg);
           }
 
           &:last-child {
-            transform: translate(0, 0) rotate(-45deg);
+            transform: translate(-50%, 0) rotate(-45deg);
           }
       }
       }
