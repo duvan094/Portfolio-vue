@@ -11,7 +11,7 @@ import ScrollToContent from './components/ScrollToContent.vue'
     <RouterView />
   </div>
   <footer>
-    Jacob Duvander © {{ new Date().getFullYear()}}
+    Copyright © {{ new Date().getFullYear()}} Jacob Duvander ☕
   </footer>
 </template>
 
