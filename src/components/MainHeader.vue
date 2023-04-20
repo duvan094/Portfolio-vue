@@ -159,10 +159,6 @@ export default {
           background-color: #FAFFFD;
           width: calc(100% - 1rem);
         }
-
-        &:hover {
-          background-color: #508484ff;
-        }
       }
 
       @media (min-width: 720px) {
