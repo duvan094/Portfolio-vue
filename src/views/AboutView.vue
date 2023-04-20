@@ -13,8 +13,12 @@
       <p>I am primarly a JavaScript developer and am used to working with frameworks such as Vue and React, but I also have experience with CMS (Content Managing Systems), like Wordpress.</p>
       <p>In my spare time, I'm interested in photography, taking care of my plants, and running, as well the occasional beer brewing.</p>
     </section>
-    <ExpandableSection title="Developer tools" text="HTML, CSS, SCSS, JavaScript, Vue, React, Node.js, TypeScript, WordPress, PHP, Git."/>
-    <ExpandableSection title="UX/UI tools" text="Figma (Adobe XD, Sketch), Adobe Photoshop/Illustrator/InDesign."/>
+    <ExpandableSection title="Developer tools">
+      <p>HTML, CSS, SCSS, JavaScript, Vue, React, Node.js, TypeScript, WordPress, PHP, Git.</p>
+    </ExpandableSection>
+    <ExpandableSection title="UX/UI tools">
+      <p>Figma (Adobe XD, Sketch), Adobe Photoshop/Illustrator/InDesign.</p>
+    </ExpandableSection>
     <ExpandableSection title="Experience">
       <div class="small-text">
         <div class="content">
@@ -25,6 +29,12 @@
         </div>
         <div class="content">
           <p><b>Trustcruit</b> · Jan. 2018 - Sep. 2018<br>An extra job after school hours building a WordPress theme.</p>
+        </div>
+        <div class="content">
+          <p><b>Hype reklambyrå</b> · feb. 2017 - jan. 2018<br>Hype is a student driven nonprofit advertising agency at Jönköping University where I worked as an Art Director.</p>
+        </div>
+        <div class="content">
+          <p><b>Jönköping University</b> · sep. 2017 - dev. 2017<br>Lab assistant in a Web developing course throughout a semester. Work involved helping students with Wordpress and JavaScript.</p>
         </div>
       </div>
     </ExpandableSection>
@@ -118,6 +128,10 @@ import RoundPicture from '../components/RoundPicture.vue'
   .small-text p {
     font-size: 1em;
     margin-bottom: .5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
 </style>

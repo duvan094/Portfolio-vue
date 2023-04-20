@@ -7,7 +7,6 @@
         </button>
         <div class="content-container" ref="contentContainer" :style="{ 'height': this.contentHeight + 'px' }">
             <div class="content" ref="content">
-                <p v-if="text">{{ text }}</p>
                 <slot></slot>
             </div>
         </div>
@@ -28,10 +27,8 @@ export default {
     props: {
         title: {
             type: String,
+            required: true
         },
-        text: {
-            type: String,
-        }
     },
     methods: {
         toggleSection() {
