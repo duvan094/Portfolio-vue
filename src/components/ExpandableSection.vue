@@ -1,5 +1,5 @@
 <template>
-    <div class="expandable-section" :class="{'toggled': sectionToggled}">
+    <div class="expandable-section" :class="{'toggled': sectionToggled}" ref="expandableSection">
         <button class="expand-button" @click="toggleSection()">
             {{ title }}
             <div class="expand-icon">
@@ -36,6 +36,7 @@ export default {
 
             if(this.sectionToggled) {
                 this.contentHeight = this.$refs.content.offsetHeight;
+                this.$refs.expandableSection.scrollIntoView({ behavior: "smooth" });
             } else {
                 this.contentHeight = 0;
             }
