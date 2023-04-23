@@ -145,9 +145,10 @@ export default {
       outline: none;
       cursor: pointer;
       pointer-events: all;
+      border-radius: 5px;
 
       @media (max-width: 720px) {
-        background-color: var(--link-color-opacity);
+        background-color: var(--header-mobile-background);
         transition: .2s ease-out background-color;
 
         span {

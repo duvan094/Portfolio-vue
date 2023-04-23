@@ -51,8 +51,8 @@ export default {
         flex-direction: column;
         width: 100%;
         margin-bottom: 1rem;
-        border-radius: .3rem;
-        overflow: hidden;
+        background-color: var(--exandable-section-bg);
+        border-radius: 5px;
     }
 
     .expand-button {
@@ -72,6 +72,7 @@ export default {
         transition: .2s ease background-color;
         border-left: 5px solid var(--link-color);
         background-color: var(--exandable-section-bg);
+        border-radius: 5px;
         z-index: 10;
 
         @media(min-width: 720px) {
@@ -112,7 +113,6 @@ export default {
         transition: .3s ease-out height, .3s ease-out opacity;
         opacity: 0;
         height: 0;
-        background-color: var(--exandable-section-bg);
 
         .content {
             padding: 1rem;
@@ -121,6 +121,7 @@ export default {
 
     .toggled {
         .expand-button {
+            border-radius: 5px 5px 0 0;
             background-color: var(--exandable-section-bg);
 
             &:hover {

@@ -15,19 +15,30 @@
   --light-green-2: #C3D7C5;
   --light-green-1: #DCE7DB;
 
-
-
-
   /*Colors*/
   --main-bg-color: #FAFFFD;
   --exandable-section-bg: #f8f8f8;
   --exandable-section-bg-hover: #f4f4f4;
   --header-bg-color: #508484;
   --header-link-color: #FAFFFD;
+  --header-mobile-background: #508484EE;
   --link-color: #508484;
   --link-color-opacity: #508484EE;
   --link-color-hover: #2e5050;
   --text-color: #0C0F0A;
+}
+
+.dark-theme {
+  --main-bg-color: var(--dark-blue-1);
+  --exandable-section-bg: var(--dark-blue-2);
+  --exandable-section-bg-hover: var(--dark-blue-3);
+  --header-bg-color: var(--dark-blue-2);
+  --header-mobile-background: #303D54ee;
+  --header-link-color: var(--light-green-3);
+  --link-color: var(--light-green-4);
+  --link-color-opacity: #508484EE;
+  --link-color-hover: var(--green-1);
+  --text-color: #FFF;
 }
 
 *,
