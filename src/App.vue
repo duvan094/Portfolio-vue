@@ -33,23 +33,6 @@ const emoji = computed(() => {
     max-width: 720px;
   }
 
-  main {
-/*     padding: 3rem 2rem;
-    margin: 0 .5rem; */
-/* 
-    animation: .5s ease-out reveal;
-
-    @keyframes reveal {
-      0%{
-        opacity: 0;
-      }
-      100%{
-        opacity: 1;
-      }
-    } */
-
-  }
-
   footer {
     padding: 2rem;
     text-align: center;

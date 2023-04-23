@@ -48,11 +48,6 @@ export default {
       left: 0;
       width: 100%;
 
-/*       @media(max-width: 960px) {
-        background-color: #508484; 
-      }
- */
-
       .wrapper {
         display: flex;
         justify-content: flex-end;
@@ -80,7 +75,7 @@ export default {
 
       .background {
         position: fixed;
-        background: #508484;
+        background: var(--link-color);
         border-radius: 50%;
         width: 200vh;
         height: 200vh;
@@ -110,15 +105,15 @@ export default {
         transition-delay: 0s;
 
         a {
-          color: #FAFFFD;
+          color: var(--main-bg-color);
           font-size: 2em;
 
           &:before {
-            background-color: #FAFFFD;
+            background-color: var(--main-bg-color);
           }
 
           &:after {
-            border: 3px solid #FAFFFD;
+            border: 3px solid var(--main-bg-color);
           }
 
           @media (min-width: 720px) {
@@ -152,7 +147,7 @@ export default {
       pointer-events: all;
 
       @media (max-width: 720px) {
-        background-color: #508484EE;
+        background-color: var(--link-color-opacity);
         transition: .2s ease-out background-color;
 
         span {
@@ -166,13 +161,13 @@ export default {
         height: 45px;
 
         span {
-          background-color: #508484;
+          background-color: var(--link-color);
           width: 100%;
         }
 
         &:hover {
           span {
-            background-color:#2e5050;
+            background-color:var(--link-color-hover);
           }
         }
       }
@@ -200,10 +195,10 @@ export default {
 
       &.toggled {
         &:after {
-          border: 3px solid #FAFFFD;
+          border: 3px solid var(--main-bg-color);
         }
         span {
-          background-color: #FAFFFD;
+          background-color: var(--main-bg-color);
           &:first-child {
             transform: translate(-50%, 0) rotate(45deg);
           }

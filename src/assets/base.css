@@ -2,7 +2,13 @@
 
 /* semantic color variables for this project */
 :root {
-
+  --main-bg-color: #FAFFFD;
+  --light-grey: #f8f8f8;
+  --grey: #f4f4f4;
+  --link-color: #508484;
+  --link-color-opacity: #508484EE;
+  --link-color-hover: #2e5050;
+  --text-color: #0C0F0A;
 }
 
 *,
@@ -16,13 +22,13 @@
 }
 
 ::-moz-selection { /* Code for Firefox */
-  color: #FAFFFD;
-  background: #0C0F0A;
+  color: var(--main-bg-color);
+  background: var(--text-color);
 }
 
 ::selection {
-  color: #FAFFFD;
-  background: #0C0F0A;
+  color: var(--main-bg-color);
+  background: var(--text-color);
 }
 
 body {
@@ -33,9 +39,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #272838;
-/*   background-color: #508484; */
-  background-color: #FAFFFD;
+  background-color: var(--main-bg-color);
   overflow-x: hidden;
 }
 
@@ -57,8 +61,7 @@ section:first-child {
 }
 
 h1, h2, h3, h4 {
-  color: #F4B942;
-  color: #0C0F0A;
+  color: var(--text-color);
   font-weight: 700;
   margin-bottom: .5rem;
 }
@@ -83,7 +86,7 @@ h4, .h4, .subHeading {
 p {
   font-size: 1.2em;
   font-weight: 400;
-  color: #0C0F0A;
+  color: var(--text-color);
   margin-bottom: 1rem;
 }
 
@@ -117,7 +120,7 @@ ul > li::before {
   transform: translateY(-50%);
   width: .4rem;
   height: .4rem;
-  background: #0C0F0A;
+  background: var(--text-color);
   border-radius: 50%;
 }
 
@@ -126,8 +129,8 @@ a, .button {
   text-decoration: none;
   font-weight: 600;
   font-size: 1.2em;
-  color: #508484;
-  fill: #508484;
+  color: var(--link-color);
+  fill: var(--link-color);
   outline: none;
   cursor: pointer;
   background: none;
@@ -145,7 +148,7 @@ a:before, .button:before {
   width: 100%;
   min-height: 2px;
   height: 0.09em;
-  background-color: #508484;
+  background-color: var(--link-color);
   position: absolute;
   left: 0;
   bottom: 0;
@@ -164,7 +167,7 @@ a:after, button:after {
   left: -10px;
   right: -10px;
   border-radius: 3px;
-  border: 3px solid #508484;
+  border: 3px solid var(--link-color);
   opacity: 0;
   transition: .1s ease-out opacity;
 }
@@ -193,12 +196,12 @@ a:after, button:after {
 }
 
 a:hover, .button:hover{
-  color: #2e5050;
-  fill: #2e5050;
+  color: var(--link-color-hover);
+  fill: var(--link-color-hover);
 }
 
 a:hover:before, .button:hover:before{
-  background-color: #2e5050;
+  background-color: var(--link-color-hover);
 }
 
 @media (hover: hover) {
@@ -210,37 +213,3 @@ a:hover:before, .button:hover:before{
     opacity: 1; 
   }
 }
-
-/* .card {
-  position: relative;
-  background-color: #FAFFFD;
-}
-
-.card::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -1;
-  background-color: #2e5050;
-  background-color: rgba(0,0,0,0.4);
-  margin-top: 2rem;
-  width: calc(100% - 1rem);
-  height: calc(100% - 1rem);
-}
-
-
-@media(min-width: 720px) {
-  .card {
-    border: none;
-  }
-
-  .card::before {
-    left: 0;
-    transform: translateX(0);
-    margin-left: -1rem;
-    margin-top: 2rem;
-  }
-} */

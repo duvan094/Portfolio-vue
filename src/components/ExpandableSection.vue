@@ -67,8 +67,8 @@ export default {
         outline: none;
         cursor: pointer;
         transition: .2s ease background-color;
-        border-left: 5px solid #508484;
-        background-color: #f8f8f8;
+        border-left: 5px solid var(--link-color);
+        background-color: var(--light-grey);
         z-index: 10;
 
         @media(min-width: 720px) {
@@ -76,7 +76,7 @@ export default {
         }
 
         &:hover {
-            background-color: #f4f4f4;
+            background-color: var(--grey);
         }
 
         .expand-icon {
@@ -88,7 +88,7 @@ export default {
                 content: '';
                 width: 100%;
                 height: 3px;
-                background-color: #508484;
+                background-color: var(--link-color);
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -109,7 +109,7 @@ export default {
         transition: .3s ease-out height, .3s ease-out opacity;
         opacity: 0;
         height: 0;
-        background-color: #f8f8f8;
+        background-color: var(--light-grey);
 
         .content {
             padding: 1rem;
@@ -118,10 +118,10 @@ export default {
 
     .toggled {
         .expand-button {
-            background-color: #f8f8f8;
+            background-color: var(--light-grey);
 
             &:hover {
-                background-color: #f2f2f2;
+                background-color: var(--grey);
             }
             .expand-icon {
                 &::after {
