@@ -25,7 +25,7 @@
             <p><b>Zmarta</b> · Oct. 2020 - present<br> Working on the Zmarta platform. My work mainly involves frontend work as well as some UX, but occasionally backend.</p>
           </div>
           <div class="content">
-            <p><b>Tross</b> · May 2019 - Oct. 2020<br>An advertising agency located in Jönköping. I worked at the web department and projects mainly involved building WordPress themes, but also occasional web apps with React.</p>
+            <p><b>Tross</b> · Mar. 2019 - Oct. 2020<br>An advertising agency located in Jönköping. I worked at the web department and projects mainly involved building WordPress themes, but also occasional web apps with React.</p>
         </div>
         <div class="content">
           <p><b>Trustcruit</b> · Jan. 2018 - Sep. 2018<br>An extra job after school hours building a WordPress theme.</p>
