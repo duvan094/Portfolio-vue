@@ -36,6 +36,7 @@ const emoji = computed(() => {
   footer {
     padding: 2rem;
     text-align: center;
+    color: var(--text-color);
   }
 
 </style>

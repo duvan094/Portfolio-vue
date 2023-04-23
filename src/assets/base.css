@@ -2,9 +2,28 @@
 
 /* semantic color variables for this project */
 :root {
-  --main-bg-color: #FAFFFD;
-  --light-grey: #f8f8f8;
-  --grey: #f4f4f4;
+  /*Color Scheme*/
+  --dark-blue-1: #262B44;
+  --dark-blue-2: #303D54;
+  --dark-blue-3: #3B5364;
+  --green-3: #456A74;
+  --green-2: #508484;
+  --green-1: #67958D;
+  --light-green-5: #7DA697;
+  --light-green-4: #94B7A4;
+  --light-green-3: #ACC7B3;
+  --light-green-2: #C3D7C5;
+  --light-green-1: #DCE7DB;
+
+
+
+
+  /*Colors*/
+  --main-bg-color: #FFF;
+  --exandable-section-bg: #f8f8f8;
+  --exandable-section-bg-hover: #f4f4f4;
+  --header-bg-color: #508484;
+  --header-link-color: #FAFFFD;
   --link-color: #508484;
   --link-color-opacity: #508484EE;
   --link-color-hover: #2e5050;

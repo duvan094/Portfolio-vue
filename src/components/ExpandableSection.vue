@@ -51,6 +51,8 @@ export default {
         flex-direction: column;
         width: 100%;
         margin-bottom: 1rem;
+        border-radius: .3rem;
+        overflow: hidden;
     }
 
     .expand-button {
@@ -66,9 +68,10 @@ export default {
         border: none;
         outline: none;
         cursor: pointer;
+        color: var(--text-color);
         transition: .2s ease background-color;
         border-left: 5px solid var(--link-color);
-        background-color: var(--light-grey);
+        background-color: var(--exandable-section-bg);
         z-index: 10;
 
         @media(min-width: 720px) {
@@ -76,7 +79,7 @@ export default {
         }
 
         &:hover {
-            background-color: var(--grey);
+            background-color: var(--exandable-section-bg-hover);
         }
 
         .expand-icon {
@@ -109,7 +112,7 @@ export default {
         transition: .3s ease-out height, .3s ease-out opacity;
         opacity: 0;
         height: 0;
-        background-color: var(--light-grey);
+        background-color: var(--exandable-section-bg);
 
         .content {
             padding: 1rem;
@@ -118,10 +121,10 @@ export default {
 
     .toggled {
         .expand-button {
-            background-color: var(--light-grey);
+            background-color: var(--exandable-section-bg);
 
             &:hover {
-                background-color: var(--grey);
+                background-color: var(--exandable-section-bg-hover);
             }
             .expand-icon {
                 &::after {

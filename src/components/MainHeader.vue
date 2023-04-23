@@ -75,7 +75,7 @@ export default {
 
       .background {
         position: fixed;
-        background: var(--link-color);
+        background: var(--header-bg-color);
         border-radius: 50%;
         width: 200vh;
         height: 200vh;
@@ -105,15 +105,15 @@ export default {
         transition-delay: 0s;
 
         a {
-          color: var(--main-bg-color);
+          color: var(--header-link-color);
           font-size: 2em;
 
           &:before {
-            background-color: var(--main-bg-color);
+            background-color: var(--header-link-color);
           }
 
           &:after {
-            border: 3px solid var(--main-bg-color);
+            border: 3px solid var(--header-link-color);
           }
 
           @media (min-width: 720px) {
@@ -151,7 +151,7 @@ export default {
         transition: .2s ease-out background-color;
 
         span {
-          background-color: #FAFFFD;
+          background-color: var(--header-link-color);
           width: calc(100% - 1rem);
         }
       }
@@ -195,10 +195,10 @@ export default {
 
       &.toggled {
         &:after {
-          border: 3px solid var(--main-bg-color);
+          border: 3px solid var(--header-bg-color);
         }
         span {
-          background-color: var(--main-bg-color);
+          background-color: var(--header-link-color);
           &:first-child {
             transform: translate(-50%, 0) rotate(45deg);
           }
