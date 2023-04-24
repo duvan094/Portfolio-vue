@@ -52,7 +52,7 @@ function changeTheme(savedTheme = null) {
     display:flex;
     flex-direction: column;
     justify-content: center;
-    min-height: calc(100vh - 88px);
+    min-height: calc(100vh - 157px);
     margin: 0 auto;
     padding: 6rem 2rem;
     width: 100%;
