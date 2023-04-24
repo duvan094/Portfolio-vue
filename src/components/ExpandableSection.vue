@@ -52,6 +52,7 @@ export default {
         width: 100%;
         margin-bottom: 1rem;
         background-color: var(--exandable-section-bg);
+        box-shadow: var(--box-shadow);
         border-radius: 5px;
     }
 

@@ -51,7 +51,6 @@ defineEmits(['toggle'])
         width: 5rem;
         height: 2.5rem;
         border: 2px solid  var(--link-color);
-        transition: .2s ease-out background-color;
 
         .toggle-text {
             position: absolute;
@@ -89,7 +88,13 @@ defineEmits(['toggle'])
         color: var(--link-color-hover);
 
         .toggle {
-            background: var(--exandable-section-bg-hover);
+            border-color: var(--link-color-hover);
+            span {
+                color: var(--link-color-hover);
+            }
+            &::before {
+                background-color: var(--link-color-hover);
+            }
         }
 
     }

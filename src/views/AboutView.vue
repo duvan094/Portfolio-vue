@@ -1,17 +1,19 @@
 <template>
   <main>
-    <section>
+    <section class="main-section">
       <div class="profile">
         <RoundPicture imageLink="profile.jpg" altText="Profile picture of me"/>
       </div>
-      <h1 tabindex="-1" id="about-me" class="animate-text">
-        <span>Hello there,</span> <span>I'm&nbsp;Jacob.</span>
-      </h1>
-      <p>I'm a UX focused frontend developer from Gothenburg, currently living in Jönköping, Sweden.</p>
-      <p>Currently I work as a System developer at <a href="https://www.zmarta.se/" target="_blank">Zmarta</a> where I mainly do frontend work, but occasionally some backend sprinkled here and there.</p>
-      <p>Previously I've studied Graphic design and Web development at Jönköping University, where I graduated from in summer of 2019.</p>
-      <p>I am primarly a JavaScript developer and am used to working with frameworks such as Vue and React, but I also have experience with CMS (Content Management System), like Wordpress.</p>
-      <p>In my spare time, I'm interested in photography, taking care of my plants, and running, as well the occasional beer brewing.</p>
+      <div>
+        <h1 tabindex="-1" id="about-me" class="animate-text">
+          <span>Hello there,</span> <span>I'm&nbsp;Jacob.</span>
+        </h1>
+        <p>I'm a UX focused frontend developer from Gothenburg, currently living in Jönköping, Sweden.</p>
+        <p>Currently I work as a System developer at <a href="https://www.zmarta.se/" target="_blank" rel="noopener noreferrer">Zmarta</a> where I mainly do frontend work, but occasionally some backend sprinkled here and there.</p>
+        <p>Previously I've studied Graphic design and Web development at Jönköping University, where I graduated from in summer of 2019.</p>
+        <p>I am primarly a JavaScript developer and am used to working with frameworks such as Vue and React, but I also have experience with CMS (Content Management System), like Wordpress.</p>
+        <p>In my spare time, I'm interested in photography, taking care of my plants, and running, as well the occasional beer brewing.</p>
+      </div>
     </section>
     <ExpandableSection title="Developer tools">
       <p>HTML, CSS, SCSS, JavaScript, Vue, React, Node.js, TypeScript, WordPress, PHP, Git.</p>
@@ -74,6 +76,20 @@ import RoundPicture from '../components/RoundPicture.vue'
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
+  }
+
+  .main-section {
+
+    @media(max-width: 720px) {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column-reverse;
+
+      .profile {
+        margin-top: 2rem;
+        margin-bottom: 0;
+      }
+    }
   }
 
   .animate-text {

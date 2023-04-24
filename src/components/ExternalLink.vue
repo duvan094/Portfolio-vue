@@ -1,5 +1,5 @@
 <template>
-    <a :href="link" target="_blank" class="external-link">
+    <a :href="link" target="_blank" class="external-link" :rel="rel">
         <EmailIcon v-if="email"/>
         <HyperLinkIcon v-else/>
         {{ title }}
@@ -26,6 +26,10 @@
         email: {
             type: Boolean,
             default: false
+        },
+        rel: {
+            type: String,
+            default: null
         }
     }
 

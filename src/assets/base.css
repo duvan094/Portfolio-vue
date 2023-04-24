@@ -26,6 +26,9 @@
   --link-color-opacity: #508484EE;
   --link-color-hover: #2e5050;
   --text-color: #0C0F0A;
+
+  --mobile-max-width: 720px;
+  --box-shadow: 0 5px 10px 0 rgba(0,0,0,.15);
 }
 
 .dark-theme {
@@ -35,10 +38,11 @@
   --header-bg-color: var(--dark-blue-2);
   --header-mobile-background: #303D54ee;
   --header-link-color: var(--light-green-3);
+  --box-shadow: 0 5px 10px 0 rgba(0,0,0,.15);
   --link-color: var(--light-green-4);
   --link-color-opacity: #508484EE;
   --link-color-hover: var(--green-1);
-  --text-color: #FFF;
+  --text-color: #FAFFFD;
 }
 
 *,

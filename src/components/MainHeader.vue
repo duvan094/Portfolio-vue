@@ -54,7 +54,7 @@ export default {
         width: 100%;
         max-width: 1080px;
         margin: auto;
-        padding: 1rem 2rem;
+        padding: 1rem;
         z-index: 1000;
         pointer-events: none;
       }
@@ -145,11 +145,25 @@ export default {
       outline: none;
       cursor: pointer;
       pointer-events: all;
-      border-radius: 5px;
+      border-radius: 5px;   
 
       @media (max-width: 720px) {
         background-color: var(--header-mobile-background);
+        
         transition: .2s ease-out background-color;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+          box-shadow: var(--box-shadow);
+          opacity: 1;
+          transition: .2s ease-out opacity;
+        }
 
         span {
           background-color: var(--header-link-color);
@@ -195,8 +209,12 @@ export default {
 
 
       &.toggled {
+        &::before {
+          opacity: 0;
+        }
+
         &:after {
-          border: 3px solid var(--header-bg-color);
+          border: 3px solid var(--header-link-color);
         }
         span {
           background-color: var(--header-link-color);
