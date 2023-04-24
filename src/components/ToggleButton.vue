@@ -84,20 +84,22 @@ defineEmits(['toggle'])
         }
     }
 
-    &:hover {
-        color: var(--link-color-hover);
+    @media(min-width: 720px) {
+        &:hover {
+            color: var(--link-color-hover);
 
-        .toggle {
-            border-color: var(--link-color-hover);
-            span {
-                color: var(--link-color-hover);
-            }
-            &::before {
-                background-color: var(--link-color-hover);
+            .toggle {
+                border-color: var(--link-color-hover);
+                span {
+                    color: var(--link-color-hover);
+                }
+                &::before {
+                    background-color: var(--link-color-hover);
+                }
             }
         }
-
     }
+
 
     &.toggled {
         .toggle {
