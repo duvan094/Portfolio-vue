@@ -18,6 +18,7 @@
   /*Colors*/
   --main-bg-color: #FAFFFD;
   --exandable-section-bg: #f8f8f8;
+  --exandable-section-shadow: none;
   --exandable-section-bg-hover: #f4f4f4;
   --header-bg-color: #508484;
   --header-link-color: #FAFFFD;
@@ -35,6 +36,7 @@
   --main-bg-color: var(--dark-blue-1);
   --exandable-section-bg: var(--dark-blue-2);
   --exandable-section-bg-hover: var(--dark-blue-3);
+  --exandable-section-shadow: 0 5px 10px 0 rgba(0,0,0,.15);
   --header-bg-color: var(--dark-blue-2);
   --header-mobile-background: #303D54ee;
   --header-link-color: var(--light-green-3);

@@ -47,18 +47,20 @@ export default {
 
 <style lang="scss" scoped>
     .expandable-section {
+
         display: flex;
         flex-direction: column;
         width: 100%;
         margin-bottom: 1rem;
         background-color: var(--exandable-section-bg);
-        box-shadow: var(--box-shadow);
-        border-radius: 5px;
+        box-shadow: var(--exandable-section-shadow);
+        /* border-radius: 5px; */
     }
 
     .expand-button {
         display: flex;
         align-items: center;
+        position: relative;
         justify-content: space-between;
         text-align: left;
         width: 100%;
@@ -71,10 +73,22 @@ export default {
         cursor: pointer;
         color: var(--text-color);
         transition: .2s ease background-color;
-        border-left: 5px solid var(--link-color);
+        /* border-left: 5px solid var(--link-color); */
         background-color: var(--exandable-section-bg);
-        border-radius: 5px;
+/*         border-radius: 5px; */
         z-index: 10;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: 11;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background-color: var(--link-color);
+        }
 
         @media(min-width: 720px) {
             font-size: 1.4em;
@@ -122,7 +136,7 @@ export default {
 
     .toggled {
         .expand-button {
-            border-radius: 5px 5px 0 0;
+            /* border-radius: 5px 5px 0 0; */
             background-color: var(--exandable-section-bg);
 
             &:hover {
