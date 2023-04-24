@@ -57,6 +57,10 @@ export default {
         padding: 1rem;
         z-index: 1000;
         pointer-events: none;
+      
+        @media(min-width: 720px) {
+          padding: 1rem 2rem;
+        }
       }
     }
 
