@@ -78,7 +78,7 @@ import RoundPicture from '../components/RoundPicture.vue'
     margin-bottom: 2rem;
   }
 
-  .main-section {
+/*   .main-section {
 
     @media(max-width: 720px) {
       margin-top: 2rem;
@@ -90,7 +90,7 @@ import RoundPicture from '../components/RoundPicture.vue'
         margin-bottom: 0;
       }
     }
-  }
+  } */
 
   .animate-text {
     span {
