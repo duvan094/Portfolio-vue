@@ -19,12 +19,13 @@ onMounted(() => {
 })
 
 function changeTheme(savedTheme = null, initial = false) {
-  const isDarkMode = () => window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  console.log(initial)
+/*   const isDarkMode = () => window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
   if(initial && !!savedTheme && isDarkMode) {
     darkTheme.value = isDarkMode
     return
-  }
+  } */
 
   if(typeof savedTheme === 'boolean') {
     darkTheme.value = savedTheme
