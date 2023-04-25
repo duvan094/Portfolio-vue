@@ -19,13 +19,12 @@ onMounted(() => {
 })
 
 function changeTheme(savedTheme = null, initial = false) {
-  console.log(initial)
-/*   const isDarkMode = () => window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-  if(initial && !!savedTheme && isDarkMode) {
+  /* Preset darkmode depending on device setting */
+  if(initial && !savedTheme && !!window?.matchMedia) {
+    const isDarkMode = window.matchMedia('prefers-color-scheme: dark').matches;
     darkTheme.value = isDarkMode
     return
-  } */
+  }
 
   if(typeof savedTheme === 'boolean') {
     darkTheme.value = savedTheme
