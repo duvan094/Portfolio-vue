@@ -30,6 +30,7 @@
 
   --mobile-max-width: 720px;
   --box-shadow: 0 5px 10px 0 rgba(0,0,0,.15);
+  --box-shadow-dark-theme: none;
 }
 
 .dark-theme {
@@ -45,6 +46,7 @@
   --link-color-opacity: #508484EE;
   --link-color-hover: var(--green-1);
   --text-color: #FAFFFD;
+  --box-shadow-dark-theme: 0 5px 10px 0 rgba(0,0,0,.15);
 }
 
 *,

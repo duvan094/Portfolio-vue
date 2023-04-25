@@ -51,6 +51,7 @@ defineEmits(['toggle'])
         width: 5rem;
         height: 2.5rem;
         border: 2px solid  var(--link-color);
+        box-shadow: var(--box-shadow-dark-theme);
 
         .toggle-text {
             position: absolute;
