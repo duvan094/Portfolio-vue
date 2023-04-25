@@ -20,16 +20,15 @@ onMounted(() => {
 
 function changeTheme(savedTheme = null, initial = false) {
   /* Preset darkmode depending on device setting */
-  if(initial && !savedTheme && !!window?.matchMedia) {
-    const isDarkMode = window.matchMedia('prefers-color-scheme: dark').matches;
+  if(initial && typeof savedTheme !== 'boolean' && !!window?.matchMedia) {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
     darkTheme.value = isDarkMode
-    return
-  }
-
-  if(typeof savedTheme === 'boolean') {
-    darkTheme.value = savedTheme
   } else {
-    darkTheme.value = !darkTheme.value
+    if(typeof savedTheme === 'boolean') {
+      darkTheme.value = savedTheme
+    } else {
+      darkTheme.value = !darkTheme.value
+    }
   }
   
   if(darkTheme.value) {
