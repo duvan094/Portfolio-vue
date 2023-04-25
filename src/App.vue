@@ -42,6 +42,7 @@ function changeTheme(savedTheme = null, initial = false) {
 </script>
 
 <template>
+  <!--   <div class="border"></div> -->
   <ScrollToContent />
   <MainHeader />
   <div class="page-wrapper">
@@ -75,5 +76,18 @@ function changeTheme(savedTheme = null, initial = false) {
     text-align: center;
     color: var(--text-color);
   }
+
+/*   .border {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - 1rem);
+    height: calc(100% - 1rem);
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    pointer-events: none;
+    border-radius: 2rem;
+    box-shadow: 0 0 0 2rem var(--header-bg-color);
+  } */
 
 </style>

@@ -118,12 +118,13 @@ export default {
                 position: absolute;
                 top: 50%;
                 left: 50%;
+                will-change: transform;
+                border-radius: 10px;
                 transform: translate(-50%,-50%);
             }
 
             &::after {
                 transition: .2s ease transform;
-                will-change: transform;
                 transform: translate(-50%,-50%) rotate(-90deg);
             }
         }

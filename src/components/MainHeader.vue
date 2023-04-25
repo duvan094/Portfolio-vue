@@ -195,10 +195,10 @@ export default {
         position: absolute;
         display: block;
         height: 3px;
-
         transform-origin: center;
         top: 50%;
         left: 50%;
+        border-radius: 10px;
         will-change: transform;
         transition: .2s ease-out transform, .2s ease-out background-color; 
         
