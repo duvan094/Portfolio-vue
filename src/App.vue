@@ -15,10 +15,17 @@ let darkTheme = ref(false)
 onMounted(() => {
   const savedTheme = JSON.parse(localStorage.getItem("dark-theme"));
 
-  changeTheme(savedTheme)
+  changeTheme(savedTheme, true)
 })
 
-function changeTheme(savedTheme = null) {
+function changeTheme(savedTheme = null, initial = false) {
+  const isDarkMode = () => window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if(initial && !!savedTheme && isDarkMode) {
+    darkTheme.value = isDarkMode
+    return
+  }
+
   if(typeof savedTheme === 'boolean') {
     darkTheme.value = savedTheme
   } else {
