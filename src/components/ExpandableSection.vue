@@ -37,9 +37,16 @@ export default {
             if(this.sectionToggled) {
                 this.contentHeight = this.$refs.content.offsetHeight;
                 this.$refs.expandableSection.scrollIntoView({ behavior: "smooth" });
+
+                window.addEventListener("resize", this.resize);
+
             } else {
                 this.contentHeight = 0;
+                window.removeEventListener("resize", this.resize);
             }
+        },
+        resize() {
+            this.contentHeight = this.$refs.content.offsetHeight;
         }
     }
 }
