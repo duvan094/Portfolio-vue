@@ -23,6 +23,10 @@
   --header-bg-color: #508484;
   --header-link-color: #FAFFFD;
   --header-mobile-background: #508484EE;
+
+  --tag-bg-color: #DCE7DB;
+  --tag-text-color: #508484;
+  
   --link-color: #508484;
   --link-color-opacity: #508484EE;
   --link-color-hover: #2e5050;
@@ -42,6 +46,10 @@
   --header-mobile-background: #303D54ee;
   --header-link-color: var(--light-green-3);
   --box-shadow: 0 5px 10px 0 rgba(0,0,0,.15);
+
+  --tag-bg-color: #C3D7C5;
+  --tag-text-color: var(--green-3);
+
   --link-color: var(--light-green-4);
   --link-color-opacity: #508484EE;
   --link-color-hover: var(--green-1);

@@ -15,21 +15,21 @@ import SlideShow from '../components/SlideShow.vue'
       <h2>Projects</h2>
       <p>Here are a few selected hobby projects. After I graduated and started working full-time as a web developer I had a long break from hobby projects, hopefully I'll have more time in the future 🤞</p>
       <div class="link-container">
-        <h4>2023</h4>
+        <span class="tag">2023</span>
         <div class="link-group">
           <p><ExternalLink title="AoE2 Soundboard" link="https://aoe2.jacobduvander.se"/></p>
         </div>
-        <h4>2019</h4>
+        <span class="tag">2019</span>
         <div class="link-group">
           <p><ExternalLink title="Wasted time" link="https://wastedtime.jacobduvander.se"/></p>
         </div>
-        <h4>2018</h4>
+        <span class="tag">2018</span>
         <div class="link-group">
           <ExternalLink title="Quiz" link="https://quiz.jacobduvander.se/"/>
           <ExternalLink title="Coffee infographic" link="https://coffee.jacobduvander.se"/>
           <ExternalLink title="Swiss design poster" link="https://swiss.jacobduvander.se"/>
         </div>
-        <h4>2017</h4>
+        <span class="tag">2017</span>
         <div class="link-group">
           <p><ExternalLink title="Christmas bird" link="https://christmasbird.jacobduvander.se/"/></p>
         </div>
@@ -57,6 +57,18 @@ import SlideShow from '../components/SlideShow.vue'
   @media(min-width: 720px) {
     gap: 2rem;
   }
+}
+
+.tag {
+  background: var(--tag-bg-color);
+  color: var(--tag-text-color);
+  box-shadow: var(--box-shadow-dark-theme);
+  border: 2px solid var(--tag-text-color);
+  padding: .2rem 1rem;
+  border-radius: 3rem;
+  font-size: 1em;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 </style>
