@@ -13,7 +13,7 @@ import SlideShow from '../components/SlideShow.vue'
     </section>
     <section>
       <h2>Projects</h2>
-      <p>Here are a few selected hobby projects. After I graduated and started working full-time as a web developer I had a long break from hobby projects, hopefully I'll have more time in the future.</p>
+      <p>Here are a few selected hobby projects. After I graduated and started working full-time as a web developer I had a long break from hobby projects, hopefully I'll have more time in the future 🤞</p>
       <div class="link-container">
         <h4>2023</h4>
         <div class="link-group">
