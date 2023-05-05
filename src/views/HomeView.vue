@@ -1,37 +1,39 @@
 <script setup>
 import ExternalLink from '../components/ExternalLink.vue'
 import SlideShow from '../components/SlideShow.vue'
+import TitleTag from '../components/TitleTag.vue'
 </script>
 
 <template>
   <main>
-    <section>
+    <section class="large-margin">
       <h1 tabindex="-1" id="welcome">Welcome to my&nbsp;site!</h1>
       <h4>I'm a frontend developer currently living in Jönköping, Sweden. This is just a site for&nbsp;fun.</h4>
       <p>The website is still a work in progress but I will use it for gathering links to hobby projects I've been working on.</p>
       <SlideShow v-if="false"/>
     </section>
-    <section>
-      <h2>Projects</h2>
-      <p>Here are a few selected hobby projects. After I graduated and started working full-time as a web developer I had a long break from hobby projects, hopefully I'll have more time in the future 🤞</p>
+    <section class="large-margin">
+      <h2>Here are a few selected hobby&nbsp;projects.</h2>
+      <p>After I graduated and started working full-time as a web developer I had a long break from side projects on my free time, hopefully I'll have more time in&nbsp;the&nbsp;future&nbsp;🤞</p>
       <div class="link-container">
-        <span class="tag">2023</span>
+        <TitleTag text="2023"/>
         <div class="link-group">
-          <p><ExternalLink title="AoE2 Soundboard" link="https://aoe2.jacobduvander.se"/></p>
+          <ExternalLink title="This website" link="/" :target="null"/>
+          <ExternalLink title="AoE2 Soundboard" link="https://aoe2.jacobduvander.se"/>
         </div>
-        <span class="tag">2019</span>
+        <TitleTag text="2019"/>
         <div class="link-group">
-          <p><ExternalLink title="Wasted time" link="https://wastedtime.jacobduvander.se"/></p>
-        </div>
-        <span class="tag">2018</span>
-        <div class="link-group">
+          <ExternalLink title="Wasted time" link="https://wastedtime.jacobduvander.se"/>
           <ExternalLink title="Quiz" link="https://quiz.jacobduvander.se/"/>
+        </div>
+        <TitleTag text="2018"/>
+        <div class="link-group">
           <ExternalLink title="Coffee infographic" link="https://coffee.jacobduvander.se"/>
           <ExternalLink title="Swiss design poster" link="https://swiss.jacobduvander.se"/>
         </div>
-        <span class="tag">2017</span>
+        <TitleTag text="2017"/>
         <div class="link-group">
-          <p><ExternalLink title="Christmas bird" link="https://christmasbird.jacobduvander.se/"/></p>
+          <ExternalLink title="Christmas bird" link="https://christmasbird.jacobduvander.se/"/>
         </div>
       </div>
     </section>
@@ -45,6 +47,7 @@ import SlideShow from '../components/SlideShow.vue'
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  margin-top: 2rem;
 }
 
 .link-group {
@@ -52,23 +55,15 @@ import SlideShow from '../components/SlideShow.vue'
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 
   @media(min-width: 720px) {
     gap: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
-.tag {
-  background: var(--tag-bg-color);
-  color: var(--tag-text-color);
-  box-shadow: var(--box-shadow-dark-theme);
-  border: 2px solid var(--tag-text-color);
-  padding: .2rem 1rem;
-  border-radius: 3rem;
-  font-size: 1em;
-  font-weight: 700;
-  margin-bottom: 1rem;
+.large-margin {
+  margin-top: 4rem;
 }
-
 </style>

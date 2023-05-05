@@ -1,5 +1,5 @@
 <template>
-    <a :href="link" target="_blank" class="external-link" :rel="rel">
+    <a :href="link" :target="target" class="external-link" :rel="rel">
         <EmailIcon v-if="email"/>
         <HyperLinkIcon v-else/>
         {{ title }}
@@ -30,6 +30,10 @@
         rel: {
             type: String,
             default: null
+        },
+        target: {
+            type: String,
+            default: '_blank'
         }
     }
 
