@@ -2,14 +2,16 @@
 import ExternalLink from '../components/ExternalLink.vue'
 import SlideShow from '../components/SlideShow.vue'
 import TitleTag from '../components/TitleTag.vue'
+import { RouterLink } from 'vue-router'
 </script>
 
 <template>
   <main>
-    <section class="large-margin">
+    <section class="main-section large-margin divider">
       <h1 tabindex="-1" id="welcome">Welcome to my&nbsp;site!</h1>
       <h4>I'm a frontend developer currently living in Jönköping, Sweden. This is just a site for&nbsp;fun.</h4>
       <p>The website is still a work in progress but I will use it for gathering links to hobby projects I've been working on.</p>
+      <p><RouterLink tabindex="0" to="/about">Read more about me</RouterLink> or scroll down to see my hobby projects.</p>
       <SlideShow v-if="false"/>
     </section>
     <section class="large-margin">
@@ -57,6 +59,10 @@ import TitleTag from '../components/TitleTag.vue'
   gap: 1rem;
   margin-bottom: 2rem;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @media(min-width: 720px) {
     gap: 2rem;
     margin-bottom: 1rem;
@@ -65,5 +71,67 @@ import TitleTag from '../components/TitleTag.vue'
 
 .large-margin {
   margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: 720px) {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+
+/*   min-height: calc(100vh - 20rem); */
+}
+
+.divider {
+  position: relative;
+/*  border-bottom: 1px solid var(--link-color); */
+ padding-bottom: 8rem;
+ margin-bottom: 8rem;
+
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+
+  &::before {
+    border: 2px solid var(--link-color);
+    height: 2.3rem;
+    width: 1.5rem;
+    border-radius: 2rem;
+  }
+
+  &::after {
+   height: .7rem;
+   width: .4rem;
+   border-radius: 1rem;
+   background-color: var(--link-color);
+   animation: scroll infinite 1s ease-in alternate;
+
+    @keyframes scroll {
+      from {
+        transform: translate(-50%, 20%);
+      }
+      
+      to {
+        transform: translate(-50%, 80%);
+      }
+
+    }
+
+  }
+
 }
 </style>
