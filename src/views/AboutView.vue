@@ -16,7 +16,7 @@
       </div>
     </section>
     <ExpandableSection title="Developer tools">
-      <p>HTML, CSS, SCSS, JavaScript, Vue, React, Node.js, TypeScript, WordPress, PHP, Git.</p>
+      <p>HTML, CSS, SCSS, JavaScript, Vue, React, Node.js, TypeScript, WordPress, PHP, SQL, Firebase, Git.</p>
     </ExpandableSection>
     <ExpandableSection title="UX/UI tools">
       <p>Figma (Adobe XD, Sketch), Adobe Photoshop/Illustrator/InDesign.</p>
