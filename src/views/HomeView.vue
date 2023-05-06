@@ -20,7 +20,7 @@ import { RouterLink } from 'vue-router'
       <div class="link-container">
         <TitleTag text="2023"/>
         <div class="link-group">
-          <ExternalLink title="This website" link="/" :target="null"/>
+          <RouterLink tabindex="0" to="/">This website</RouterLink>
           <ExternalLink title="AoE2 Soundboard" link="https://aoe2.jacobduvander.se"/>
         </div>
         <TitleTag text="2019"/>
