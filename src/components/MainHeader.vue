@@ -1,10 +1,7 @@
 <template>
   <header>
     <div class="wrapper">
-      <button class="hamburger-btn" :class="{'toggled': menuToggled}" @click="toggleMenu">
-        <span></span>
-        <span></span>
-      </button>
+      <SmoothHamburger :toggled="menuToggled" @toggle="toggleMenu()"/>
     </div>
     <div class="nav" :class="{'visible': menuToggled}">
       <nav>
@@ -18,12 +15,13 @@
 
 <script>
 import { RouterLink } from 'vue-router'
-
+import SmoothHamburger from './SmoothHamburger.vue'
 
 export default {
   name: 'MainHeader',
   components: {
     RouterLink,
+    SmoothHamburger
   },
   data(){
     return {
@@ -139,98 +137,5 @@ export default {
       }
     }
 
-    .hamburger-btn {
-      position: relative;
-      padding: 0;
-      width: 50px;
-      height: 50px;
-      background: none;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      pointer-events: all;
-      border-radius: 5px;   
-
-      @media (max-width: 720px) {
-        background-color: var(--header-mobile-background);
-        
-        transition: .2s ease-out background-color;
-
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          border-radius: 5px;
-          box-shadow: var(--box-shadow);
-          opacity: 1;
-          transition: .2s ease-out opacity;
-        }
-
-        span {
-          background-color: var(--header-link-color);
-          width: calc(100% - 1rem);
-        }
-      }
-
-      @media (min-width: 720px) {
-        width: 45px;
-        height: 45px;
-
-        span {
-          background-color: var(--link-color);
-          width: 100%;
-        }
-
-        &:hover {
-          span {
-            background-color:var(--link-color-hover);
-          }
-        }
-      }
-
-      span {
-        position: absolute;
-        display: block;
-        height: 3px;
-        transform-origin: center;
-        top: 50%;
-        left: 50%;
-        border-radius: 10px;
-        will-change: transform;
-        transition: .2s ease-out transform, .2s ease-out background-color; 
-        
-        &:first-child {
-          transform: translate(-50%, -200%);
-        }
-
-        &:last-child {
-          transform: translate(-50%, 200%);
-        }
-      }
-
-
-      &.toggled {
-        &::before {
-          opacity: 0;
-        }
-
-        &:after {
-          border: 3px solid var(--header-link-color);
-        }
-        span {
-          background-color: var(--header-link-color);
-          &:first-child {
-            transform: translate(-50%, 0) rotate(45deg);
-          }
-
-          &:last-child {
-            transform: translate(-50%, 0) rotate(-45deg);
-          }
-      }
-      }
-    }
 
 </style>
