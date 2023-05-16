@@ -21,6 +21,7 @@ import { RouterLink } from 'vue-router'
         <TitleTag text="2023"/>
         <div class="link-group">
           <RouterLink tabindex="0" to="/">This website</RouterLink>
+          <ExternalLink title="Three.js demo" link="https://threejs.jacobduvander.se"/>
           <ExternalLink title="AoE2 Soundboard" link="https://aoe2.jacobduvander.se"/>
         </div>
         <TitleTag text="2019"/>
