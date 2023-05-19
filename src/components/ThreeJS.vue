@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -70,8 +70,10 @@ async function loadModel() {
   model.position.y = 1
 }
 
+let requestId;
+
 function animate() {
-  requestAnimationFrame(function () {
+  requestId = requestAnimationFrame(function () {
     animate()
   })
 
@@ -88,7 +90,6 @@ onMounted(async () => {
   await loadModel()
 
   controls = new OrbitControls( camera, renderer.domElement );
-/*   controls.enableDamping = true; */
   controls.minDistance  = 4
   controls.maxDistance = 50;
 
@@ -99,6 +100,11 @@ onMounted(async () => {
 
   animate()
 })
+
+onUnmounted(()=> {
+  cancelAnimationFrame(requestId);
+  scene.clear()
+}) 
 
 </script>
 
