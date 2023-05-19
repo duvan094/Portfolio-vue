@@ -1,5 +1,5 @@
 <template>
-  <div class="container" ref="container"></div>
+  <div class="container" ref="container" :class="[{'loaded': loaded}]"></div>
 </template>
 
 <script setup>
@@ -8,6 +8,7 @@ import * as THREE from 'three'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 const container = ref(null)
+const loaded = ref(false)
 
 let scene, model, camera, renderer, controls
 
@@ -58,6 +59,7 @@ async function loadModel() {
     loader.load( meshFile2, function ( gltf ) {
       model = gltf.scene
       scene.add( model );
+      loaded.value = true
       return resolve()
 
     }, undefined, function ( ) {
@@ -86,7 +88,7 @@ onMounted(async () => {
   await loadModel()
 
   controls = new OrbitControls( camera, renderer.domElement );
-  controls.enableDamping = true;
+/*   controls.enableDamping = true; */
   controls.minDistance  = 4
   controls.maxDistance = 50;
 
@@ -100,7 +102,7 @@ onMounted(async () => {
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
   .container {
     position: fixed;
@@ -108,6 +110,12 @@ onMounted(async () => {
     left: 0;
     z-index: 0;
     cursor: grab;
+    opacity: 0;
+    transition: 1s ease-out opacity;
+
+    &.loaded {
+      opacity: 1;
+    }
   }
 
   .container:active {
