@@ -12,7 +12,7 @@ const loaded = ref(false)
 
 let scene, model, camera, renderer, controls
 
-const meshFile2 =  'camera.glb'
+const meshPath =  '/camera.glb'
 
 function initateRenderer() {
   scene = new THREE.Scene()
@@ -56,7 +56,7 @@ async function loadModel() {
   const loader = new GLTFLoader();
 
   await new Promise((resolve) => { 
-    loader.load( meshFile2, function ( gltf ) {
+    loader.load( meshPath, function ( gltf ) {
       model = gltf.scene
       scene.add( model );
       loaded.value = true
