@@ -8,7 +8,8 @@
 </script>
 
 <template>
-    <button class="hamburger-button" :class="{ toggled: toggled }" @click="$emit('toggle')">
+    <button class="hamburger-button" :class="{ toggled: toggled }" @click="$emit('toggle')" type="button">
+        <span class="sr-only">Menu button</span>
         <svg class="hamburger" width="100%" height="100%" viewBox="0 0 71 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
             <g transform="matrix(1,0,0,1,-1207.97,-1323.24)">
                 <g transform="matrix(1,0,0,1,0.661055,0.220346)">

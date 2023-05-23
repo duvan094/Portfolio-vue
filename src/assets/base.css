@@ -260,3 +260,7 @@ a:hover:before, .link-button:hover:before{
     opacity: 1; 
   }
 }
+
+.sr-only{
+  display: none;
+}
