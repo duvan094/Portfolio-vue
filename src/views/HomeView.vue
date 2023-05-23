@@ -8,8 +8,8 @@ import { RouterLink } from 'vue-router'
 <template>
   <main>
     <section class="main-section large-margin divider">
-      <h1 tabindex="-1" id="welcome">Welcome to my&nbsp;site!</h1>
-      <h4>I'm a frontend developer currently living in Jönköping, Sweden. This is just a site for&nbsp;fun.</h4>
+      <h1 tabindex="-1" id="welcome">Hi, welcome to my&nbsp;site!</h1>
+      <h2 class="h4">I'm a frontend developer currently living in Jönköping, Sweden. This is just a site for&nbsp;fun.</h2>
       <p>The website is still a work in progress but I will use it for gathering links to hobby projects I've been working on.</p>
       <p><RouterLink tabindex="0" to="/about">Read more about me</RouterLink> or scroll down to see my hobby projects.</p>
       <SlideShow v-if="false"/>
