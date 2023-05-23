@@ -3,7 +3,7 @@
     <div class="wrapper">
       <SmoothHamburger :toggled="menuToggled" @toggle="toggleMenu()"/>
     </div>
-    <div class="nav" :class="{'visible': menuToggled}">
+    <div class="menu" :class="{'visible': menuToggled}">
       <nav>
         <RouterLink tabindex="0" @click="this.menuToggled = false" to="/">Home</RouterLink>
         <RouterLink tabindex="0" @click="this.menuToggled = false" to="/about">About me</RouterLink>
@@ -62,7 +62,7 @@ export default {
       }
     }
 
-    .nav {
+    .menu {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -103,7 +103,8 @@ export default {
         width: 100%;
         z-index: 1;
         opacity: 0;
-        transition: .2s ease-out opacity;
+        visibility: hidden;
+        transition: .2s ease-out all;
         transition-delay: 0s;
 
         a {
@@ -128,6 +129,7 @@ export default {
         opacity: 1;
         pointer-events: all;
         nav {
+          visibility: visible;
           opacity: 1;
           transition-delay: .2s;
         }

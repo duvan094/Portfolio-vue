@@ -16,7 +16,7 @@ import { RouterLink } from 'vue-router'
     </section>
     <section class="large-margin">
       <h2>Here are a few selected hobby&nbsp;projects.</h2>
-      <p>After I graduated and started working full-time as a web developer I had a long break from side projects on my free time, hopefully I'll have more time in&nbsp;the&nbsp;future&nbsp;🤞</p>
+      <p>After I graduated and started working full-time as a web developer, I had a long break from side projects in my free time. Hopefully I'll have more time in&nbsp;the&nbsp;future&nbsp;🤞</p>
       <div class="link-container">
         <TitleTag text="2023"/>
         <div class="link-group">
