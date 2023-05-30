@@ -43,10 +43,10 @@
     <ExpandableSection title="Education">
       <div class="small-text">
         <div class="content">
-          <p><b>Jönköping University</b> · 2016 - 2019<br>Bachelor degree in informatics. Specilization in Graphic Design and Web development.</p>
+          <p><b>Jönköping University</b> · 2016 - 2019<br>Bachelor degree in informatics. Specialization in Graphic Design and Web development.</p>
         </div>
         <div class="content">
-          <p><b>Chalmers University of Technology</b> · 2014 - 2016<br>Software engineering. Programming primarely with Java, but also Assembler and C.</p>
+          <p><b>Chalmers University of Technology</b> · 2014 - 2016<br>Software engineering. Programming primarily with Java, but also Assembler and C.</p>
         </div>
         <div class="content">
           <p><b>Lerums Gymnasium</b> · 2010 - 2013<br>Studied a Media Technology program. My first introduction to Adobe collection and web development.</p>
@@ -56,10 +56,18 @@
     <section>
       <h2>Socials</h2>
       <p>Feel free to reach out to me on social media.</p>
-      <div class="socials">
+      <div class="links">
         <ExternalLink title="Email" link="mailto:jacobduvander@gmail.com" :email="true"/>
         <ExternalLink title="Github" link="https://github.com/duvan094"/>
         <ExternalLink title="LinkedIn" link="https://www.linkedin.com/in/jacobduvander/"/>
+      </div>
+    </section>
+    <section>
+      <h2>Resumé</h2>
+      <p>Check out my full CV down below 👇</p>
+      <div class="links">
+        <a href="/cv-en.pdf" target="_blank">CV - English version</a>
+        <a href="/cv-sv.pdf" target="_blank">CV - Swedish version</a>
       </div>
     </section>
   </main>
@@ -121,7 +129,7 @@ import RoundPicture from '../components/RoundPicture.vue'
     }
   }
 
-  .socials {
+  .links {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
