@@ -37,6 +37,7 @@ import { RouterLink } from 'vue-router'
         <TitleTag text="2017"/>
         <div class="link-group">
           <ExternalLink title="Christmas bird" link="https://christmasbird.jacobduvander.se/"/>
+          <ExternalLink title="Wallz" link="https://wallz.jacobduvander.se/"/>
         </div>
       </div>
     </section>
