@@ -233,11 +233,11 @@ a:after, button:after {
     font-size: 1.6em;
   }
   
-  p, a {
+  p, a, .link-button {
     font-size: 1.4em;
   }
 
-  p > a {
+  p > a, p > .link-button {
     font-size: inherit;
   }
 }

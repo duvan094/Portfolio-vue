@@ -3,6 +3,13 @@ import ExternalLink from '../components/ExternalLink.vue'
 import SlideShow from '../components/SlideShow.vue'
 import TitleTag from '../components/TitleTag.vue'
 import { RouterLink } from 'vue-router'
+
+function scrollToTop(){
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
 </script>
 
 <template>
@@ -20,7 +27,7 @@ import { RouterLink } from 'vue-router'
       <div class="link-container">
         <TitleTag text="2023"/>
         <div class="link-group">
-          <RouterLink tabindex="0" to="/">This website</RouterLink>
+          <button class="link-button" tabindex="0" @click="scrollToTop()">This website</button>
           <ExternalLink title="Three.js demo" link="https://threejs.jacobduvander.se"/>
           <ExternalLink title="AoE2 Soundboard" link="https://aoe2.jacobduvander.se"/>
         </div>
