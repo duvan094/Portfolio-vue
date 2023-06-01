@@ -10,6 +10,9 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 const container = ref(null)
 const loaded = ref(false)
 
+
+const darkTheme = ref(false)
+
 let scene, model, camera, renderer, controls
 
 const meshPath =  '/camera.glb'
@@ -49,7 +52,11 @@ function addLights() {
   const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, .5 );
   scene.add( light );
 
-  scene.fog = new THREE.FogExp2( 0xffffff, .06 );
+  if(darkTheme.value) {
+    scene.fog = new THREE.FogExp2( 0x262B44, .06 );
+  } else {
+    scene.fog = new THREE.FogExp2( 0xffffff, .06 );
+  }
 }
 
 async function loadModel() {
@@ -77,21 +84,23 @@ function animate() {
     animate()
   })
 
-  if(model) {
-    model.rotation.y += 0.005 
-  }
+  controls.update()
 
   renderer.render(scene, camera)
 }
 
 onMounted(async () => {
+  const savedTheme = JSON.parse(localStorage.getItem("dark-theme"));
+  darkTheme.value = savedTheme
+
   initateRenderer()
   addLights()
   await loadModel()
 
   controls = new OrbitControls( camera, renderer.domElement );
   controls.minDistance  = 4
-  controls.maxDistance = 50;
+  controls.maxDistance = 50
+  controls.autoRotate = true
 
   camera.position.z = 4
   camera.position.x = 3
