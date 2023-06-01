@@ -46,7 +46,7 @@ function addLights() {
   const pointLight = new THREE.PointLight(0xffffff, 1)
   pointLight.position.x = 20
   pointLight.position.y = 50
-  pointLight.position.z = 20
+  pointLight.position.z = -10
   scene.add(pointLight)
 
   const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, .5 );
@@ -102,8 +102,8 @@ onMounted(async () => {
   controls.maxDistance = 50
   controls.autoRotate = true
 
-  camera.position.z = 4
-  camera.position.x = 3
+  camera.position.z = -4
+  camera.position.x = -2
   camera.position.y = 2
   controls.update();
 
