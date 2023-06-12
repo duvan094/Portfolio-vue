@@ -28,6 +28,7 @@ function scrollToTop(){
         <TitleTag text="2023"/>
         <div class="link-group">
           <button class="link-button" tabindex="0" @click="scrollToTop()">This website</button>
+          <ExternalLink title="Porcelain painting" link="https://porslin.jacobduvander.se"/>
           <ExternalLink title="Three.js demo" link="https://threejs.jacobduvander.se"/>
           <ExternalLink title="AoE2 Soundboard" link="https://aoe2.jacobduvander.se"/>
         </div>
