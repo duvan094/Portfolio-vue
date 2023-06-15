@@ -14,18 +14,19 @@ exports.handler = async function (event, context) {
       text: 'and easy to do anywhere, even with Node.js',
       html: '<strong>and easy to do anywhere, even with Node.js</strong>',
     }
-    sgMail
+    await sgMail
       .send(msg)
       .then(() => {
         console.log('Email sent')
       })
       .catch((error) => {
+        console.log('something happended')
         console.error(error)
       })
 
 
     return {
         statusCode: 200,
-        body: JSON.stringify({ message: "Hello World" }),
+        body: JSON.stringify({ message: "Sending email!" }),
       };
   };
