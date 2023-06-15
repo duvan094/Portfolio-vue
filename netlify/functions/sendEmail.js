@@ -2,14 +2,14 @@
 
 exports.handler = async function (event, context) {
     // your server-side functionality
+    const sanitizer = require('sanitize')();
 
     const rawBody = JSON.parse(String(event.body).replace(/'/g, '\'').replace(/\\'/g,"'"))
 
-    const { email, message } = rawBody
-    
-    // {"email":"jacobduvander@gmail.com","message":"test"}
-    
-    console.log('rawBody', rawBody)
+    const { email: emailRaw, message: messageRaw } = rawBody
+
+    const email = sanitizer.value(emailRaw, 'string');
+    const message = sanitizer.value(messageRaw, 'string');
 
     if(!email || !message) {
         console.log('email or message empty')
