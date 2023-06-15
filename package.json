@@ -10,10 +10,11 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
     "sass": "^1.58.3",
+    "three": "^0.152.2",
     "vue": "^3.2.47",
-    "vue-router": "^4.1.6",
-    "three": "^0.152.2"
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
