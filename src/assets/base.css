@@ -24,13 +24,20 @@
   --header-link-color: #FAFFFD;
   --header-mobile-background: #508484EE;
 
+  --selection-text-color: #FAFFFD;
+  --selection-bg-color: #0C0F0A;
+
   --tag-bg-color: #DCE7DB;
   --tag-text-color: #508484;
   
-  --button-text: #DCE7DB;
+  --button-text: #FAFFFD;
   --button-background: #508484;
+  --button-background-hover: #2e5050;
 
   --input-background: #FAFFFD;
+  --input-label-color: #0C0F0A;
+  --input-focus-color: #00acc1;
+  --input-focus-color-border: #b3dce1;
 
   --link-color: #508484;
   --link-color-opacity: #508484EE;
@@ -52,11 +59,21 @@
   --header-link-color: var(--light-green-3);
   --box-shadow: 0 5px 10px 0 rgba(0,0,0,.15);
 
+  --selection-text-color: #FAFFFD;
+  --selection-bg-color: #499bd6;
+
   --tag-bg-color: #C3D7C5;
   --tag-text-color: var(--green-3);
 
-  --button-text: #C3D7C5;
-  --button-background: var(--green-3);
+  --input-background: #FAFFFD;
+  --input-label-color: #FAFFFD;
+  --input-focus-color-border: #00acc1;
+  --input-focus-color: #b3dce1;
+
+  --button-text: #FAFFFD;
+  --button-background: var(--green-2);
+  /* --button-background: #508484; */
+  --button-background-hover: var(--green-3);
 
   --link-color: var(--light-green-4);
   --link-color-opacity: #508484EE;
@@ -77,13 +94,13 @@
 }
 
 ::-moz-selection { /* Code for Firefox */
-  color: var(--main-bg-color);
-  background: var(--text-color);
+  color: var(--selection-text-color);
+  background: var(--selection-bg-color);
 }
 
 ::selection {
-  color: var(--main-bg-color);
-  background: var(--text-color);
+  color: var(--selection-text-color);
+  background: var(--selection-bg-color);
 }
 
 body {
@@ -204,6 +221,11 @@ a, .link-button {
   cursor: pointer;
   border: none;
   outline: none;
+  transition: .2s ease-out background-color;
+}
+
+.button:hover {
+  background-color: var(--button-background-hover);
 }
 
 p > a, p > .link-button {
