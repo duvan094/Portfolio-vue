@@ -8,6 +8,8 @@ exports.handler = async function (event, context) {
     const email = rawBody.email
     const message = rawBody.message
 
+    console.log('rawBody', rawBody)
+
     if(!email || !message) {
         console.log('email or message empty')
         console.log('email', email)
@@ -32,15 +34,15 @@ exports.handler = async function (event, context) {
       text,
       html
     }
-    await sgMail
-      .send(msg)
-      .then(() => {
-        console.log('Email sent')
-      })
-      .catch((error) => {
-        console.log('something happended')
-        console.error(error)
-      })
+    // await sgMail
+    //   .send(msg)
+    //   .then(() => {
+    //     console.log('Email sent')
+    //   })
+    //   .catch((error) => {
+    //     console.log('something happended')
+    //     console.error(error)
+    //   })
 
 
     return {
