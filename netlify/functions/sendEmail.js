@@ -3,11 +3,12 @@
 exports.handler = async function (event, context) {
     // your server-side functionality
 
-    const rawBody = String(event.body).replace(/'/g, '\'').replace(/\\'/g,"'")
+    const rawBody = JSON.parse(String(event.body).replace(/'/g, '\'').replace(/\\'/g,"'"))
 
-    const email = rawBody.email
-    const message = rawBody.message
-
+    const { email, message } = rawBody
+    
+    // {"email":"jacobduvander@gmail.com","message":"test"}
+    
     console.log('rawBody', rawBody)
 
     if(!email || !message) {
