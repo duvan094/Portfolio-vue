@@ -2,6 +2,7 @@
 import ExternalLink from '../components/ExternalLink.vue'
 import SlideShow from '../components/SlideShow.vue'
 import TitleTag from '../components/TitleTag.vue'
+import ContactForm from '../components/ContactForm.vue'
 import { RouterLink } from 'vue-router'
 
 function scrollToTop(){
@@ -49,6 +50,7 @@ function scrollToTop(){
         </div>
       </div>
     </section>
+    <ContactForm />
   </main>
 </template>
 

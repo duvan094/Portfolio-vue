@@ -27,6 +27,11 @@
   --tag-bg-color: #DCE7DB;
   --tag-text-color: #508484;
   
+  --button-text: #DCE7DB;
+  --button-background: #508484;
+
+  --input-background: #FAFFFD;
+
   --link-color: #508484;
   --link-color-opacity: #508484EE;
   --link-color-hover: #2e5050;
@@ -49,6 +54,9 @@
 
   --tag-bg-color: #C3D7C5;
   --tag-text-color: var(--green-3);
+
+  --button-text: #C3D7C5;
+  --button-background: var(--green-3);
 
   --link-color: var(--light-green-4);
   --link-color-opacity: #508484EE;
@@ -185,6 +193,19 @@ a, .link-button {
   padding: 0;
 }
 
+.button {
+  font-weight: 600;
+  font-size: 1.2em;
+  padding: 1rem;
+  color: var(--button-text);
+  background-color: var(--button-background);
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 p > a, p > .link-button {
   font-size: inherit;
 } 
@@ -205,7 +226,7 @@ a:before, .link-button:before {
   transform-origin: left;
 }
 
-a:after, button:after {
+a:after, .link-button:after, button::after, .button::after {
   content: '';
   display: block;
   position: absolute;
@@ -256,7 +277,7 @@ a:hover:before, .link-button:hover:before{
     transform: scaleX(1);
   }
 
-  a:focus-visible:after, button:focus-visible:after {
+  a:focus-visible:after, button:focus-visible:after, .button:focus-visible:after {
     opacity: 1; 
   }
 }
