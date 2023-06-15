@@ -19,7 +19,13 @@ exports.handler = async function (event, context) {
     }
 
     const text = `Sender: ${email}. Message: ${message}`
-    const html = `<strong>Sender:</strong> ${email}. <strong>Message:</strong></br>${message}`
+    const html = `
+                    <h1>Message from Hello@jacobduvander.se</h1>
+                    <h2>Sender:</h2>
+                    <p>${email}</p>
+                    <h2>Message:</h2>
+                    <p>${message}</p>
+                `
 
     const sgMail = require('@sendgrid/mail')
     // sgMail.setApiKey(process.env.SENDGRID_API_KEY)
