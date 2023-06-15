@@ -5,7 +5,18 @@ exports.handler = async function (event, context) {
 
     const rawBody = String(event.body).replace(/'/g, '\'').replace(/\\'/g,"'")
 
-    console.log('rawBody', rawBody)
+    const email = rawBody.email
+    const message = rawBody.message
+
+    if(!email || !message) {
+        return {
+            statusCode: 400,
+            // body: JSON.stringify({ message: "Email failed" }),
+          };
+    }
+
+    const text = `Sender: ${email}. Message: ${message}`
+    const html = `<strong>Sender:</strong> ${email}. <strong>Message:</strong></br>${message}`
 
     const sgMail = require('@sendgrid/mail')
     // sgMail.setApiKey(process.env.SENDGRID_API_KEY)
@@ -14,9 +25,9 @@ exports.handler = async function (event, context) {
     const msg = {
       to: process.env.SEND_GRID_RECIPENT, // Change to your recipient
       from: process.env.SEND_GRID_VERIFIED_SENDER, // Change to your verified sender
-      subject: 'Sending with SendGrid is Fun',
-      text: 'and easy to do anywhere, even with Node.js',
-      html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+      subject: 'Message from Hello@jacobduvander.se',
+      text,
+      html
     }
     await sgMail
       .send(msg)
@@ -31,6 +42,6 @@ exports.handler = async function (event, context) {
 
     return {
         statusCode: 200,
-        body: JSON.stringify({ message: "Sending email!" }),
+        // body: JSON.stringify({ message: "Sending email!" }),
       };
   };
