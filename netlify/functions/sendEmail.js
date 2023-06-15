@@ -9,6 +9,9 @@ exports.handler = async function (event, context) {
     const message = rawBody.message
 
     if(!email || !message) {
+        console.log('email or message empty')
+        console.log('email', email)
+        console.log('message', message)
         return {
             statusCode: 400,
             // body: JSON.stringify({ message: "Email failed" }),
