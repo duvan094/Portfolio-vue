@@ -6,10 +6,7 @@ exports.handler = async function (event, context) {
 
     const rawBody = JSON.parse(String(event.body).replace(/'/g, '\'').replace(/\\'/g,"'"))
 
-    const { email: emailRaw, message: messageRaw } = rawBody
-
-    const email = sanitizer.value(emailRaw, 'string');
-    const message = sanitizer.value(messageRaw, 'string');
+    const { email, message } = sanitizer.primitives(rawBody)
 
     if(!email || !message) {
         console.log('email or message empty')
@@ -35,15 +32,16 @@ exports.handler = async function (event, context) {
       text,
       html
     }
-    // await sgMail
-    //   .send(msg)
-    //   .then(() => {
-    //     console.log('Email sent')
-    //   })
-    //   .catch((error) => {
-    //     console.log('something happended')
-    //     console.error(error)
-    //   })
+
+    await sgMail
+      .send(msg)
+      .then(() => {
+        console.log('Email sent')
+      })
+      .catch((error) => {
+        console.log('something happended')
+        console.error(error)
+      })
 
 
     return {
