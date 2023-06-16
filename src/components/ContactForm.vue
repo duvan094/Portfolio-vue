@@ -95,7 +95,7 @@
     <section v-else>
         <h2>Send me a message ✉️</h2>
         <p>Feel free to send me a message, I'll reply as soon as possible.</p>
-        <form @submit.prevent="sendEmail" class="form">
+        <form @submit.prevent="sendEmail" class="form" :class="{'sending': sending}">
             <div class="input-field" :class="{'error': emailError}">
                 <label for="email">Your email</label>
                 <input type="email" id="email" name="email" placeholder="ex. jacobduvander@gmail.com" v-model="email" @input="clearError('email')"/>
@@ -105,7 +105,7 @@
                 <textarea type="text" id="message" name="message" placeholder="ex. Hello! Nice website!" v-model="message" @input="clearError('message')"/>
             </div>
             <div class="button-container">
-                <button type="submit" class="button">
+                <button type="submit" class="button" :disabled="sending">
                     Send message
                 </button>
                 <div v-if="emailSent" class="message-sent">
@@ -232,6 +232,17 @@
 
 }
 
+
+.form {
+    &.sending {
+
+        textarea, input, .button {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+    }
+}
 
 
 </style>
