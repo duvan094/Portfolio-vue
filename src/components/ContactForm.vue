@@ -149,7 +149,7 @@
     .form {
         display: flex;
         flex-direction: column;
-        max-width: 420px;
+        max-width: 380px;
         width: 100%;
         margin: auto;
         align-items: flex-start;
