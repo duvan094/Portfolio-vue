@@ -21,7 +21,7 @@
 
 
     function clearError(field) {
-        emailSent.value = false
+        // emailSent.value = false
         errorSending.value = false
 
         if(field === 'email') {
@@ -110,18 +110,18 @@
         <form @submit.prevent="sendEmail" class="form" :class="{'sending': sending, 'emailSent': emailSent}">
             <div class="input-field" :class="{'error': nameError}">
                 <label for="message">Name</label>
-                <input type="text" maxlength="40" id="name" name="name" placeholder="ex. Jacob Duvander" v-model="name" @input="clearError('name')"/>
+                <input type="text" :disabled="emailSent" maxlength="40" id="name" name="name" placeholder="ex. Jacob Duvander" v-model="name" @input="clearError('name')"/>
             </div>
             <div class="input-field" :class="{'error': emailError}">
                 <label for="email">Your email</label>
-                <input type="email" maxlength="50" id="email" name="email" placeholder="ex. jacobduvander@gmail.com" v-model="email" @input="clearError('email')"/>
+                <input type="email" :disabled="emailSent" maxlength="50" id="email" name="email" placeholder="ex. jacobduvander@gmail.com" v-model="email" @input="clearError('email')"/>
             </div>
             <div class="input-field" :class="{'error': messageError}">
                 <label for="message">Message</label>
-                <textarea type="text" maxlength="400" id="message" name="message" placeholder="ex. Hello! Nice website!" v-model="message" @input="clearError('message')"/>
+                <textarea :disabled="emailSent" type="text" maxlength="400" id="message" name="message" placeholder="ex. Hello! Nice website!" v-model="message" @input="clearError('message')"/>
             </div>
             <div class="button-container">
-                <button type="submit" class="button" :disabled="sending">
+                <button type="submit" class="button" :disabled="sending || emailSent">
                     Send message
                 </button>
                 <div v-if="emailSent" class="message-sent">
