@@ -9,9 +9,11 @@
     // })
 
     let email = ref("")
+    let name = ref("")
     let message = ref("")
 
     let emailError = ref(false)
+    let nameError = ref(false)
     let messageError = ref(false)
 
     let emailSent = ref(false)
@@ -19,13 +21,17 @@
 
 
     function clearError(field) {
-        console.log('clear', field)
         emailSent.value = false
         errorSending.value = false
 
         if(field === 'email') {
             emailError.value = false
         }
+
+        if(field === 'name') {
+            nameError.value = false
+        }
+
 
         if(field === 'message') {
             messageError.value = false
@@ -41,6 +47,11 @@
 
         if(!email.value) {
             emailError.value = true
+            error = true
+        }
+
+        if(!name.value) {
+            nameError.value = true
             error = true
         }
 
@@ -61,6 +72,7 @@
 
         const data = {
             email: email.value,
+            name: name.value,
             message: message.value
         }
 
@@ -96,13 +108,17 @@
         <h2>Send me a message ✉️</h2>
         <p>Feel free to send me a message, I'll reply as soon as possible.</p>
         <form @submit.prevent="sendEmail" class="form" :class="{'sending': sending}">
+            <div class="input-field" :class="{'error': nameError}">
+                <label for="message">Name</label>
+                <input type="text" maxlength="40" id="name" name="name" placeholder="ex. Jacob Duvander" v-model="name" @input="clearError('name')"/>
+            </div>
             <div class="input-field" :class="{'error': emailError}">
                 <label for="email">Your email</label>
-                <input type="email" id="email" name="email" placeholder="ex. jacobduvander@gmail.com" v-model="email" @input="clearError('email')"/>
+                <input type="email" maxlength="50" id="email" name="email" placeholder="ex. jacobduvander@gmail.com" v-model="email" @input="clearError('email')"/>
             </div>
             <div class="input-field" :class="{'error': messageError}">
-                <label for="message">Your message</label>
-                <textarea type="text" id="message" name="message" placeholder="ex. Hello! Nice website!" v-model="message" @input="clearError('message')"/>
+                <label for="message">Message</label>
+                <textarea type="text" maxlength="400" id="message" name="message" placeholder="ex. Hello! Nice website!" v-model="message" @input="clearError('message')"/>
             </div>
             <div class="button-container">
                 <button type="submit" class="button" :disabled="sending">
@@ -144,6 +160,7 @@
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+        margin-top: 1rem;
 
         .message-sent span{
             font-weight: 600;
@@ -177,7 +194,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
     label {
         display: inline-block;

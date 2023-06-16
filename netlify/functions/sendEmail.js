@@ -6,11 +6,12 @@ exports.handler = async function (event, context) {
 
     const rawBody = JSON.parse(String(event.body).replace(/'/g, '\'').replace(/\\'/g,"'"))
 
-    const { email, message } = sanitizer.primitives(rawBody)
+    const { email, name, message } = sanitizer.primitives(rawBody)
 
-    if(!email || !message) {
+    if(!email || !message || !name) {
         console.log('email or message empty')
         console.log('email', email)
+        console.log('name', name)
         console.log('message', message)
         return {
             statusCode: 400,
@@ -18,11 +19,12 @@ exports.handler = async function (event, context) {
           };
     }
 
-    const text = `Sender: ${email}. Message: ${message}`
+    const text = `Sender: ${email}. Name: ${name}. Message: ${message}`
     const html = `
-                    <h1>Message from Hello@jacobduvander.se</h1>
+                    <h1>Message from ${name}</h1>
                     <h2>Sender:</h2>
-                    <p>${email}</p>
+                    <p>Name: <b>${name}</b></p>
+                    <p>Email: <b>${email}</b></p>
                     <h2>Message:</h2>
                     <p>${message}</p>
                 `
