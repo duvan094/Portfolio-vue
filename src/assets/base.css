@@ -33,6 +33,7 @@
   --button-text: #FAFFFD;
   --button-background: #508484;
   --button-background-hover: #2e5050;
+  --button-border: var(--green-3);
 
   --input-background: #FAFFFD;
   --input-label-color: #0C0F0A;
@@ -72,6 +73,7 @@
 
   --button-text: #FAFFFD;
   --button-background: var(--green-2);
+  --button-border: var(--light-green-3);
   /* --button-background: #508484; */
   --button-background-hover: var(--green-3);
 
@@ -213,13 +215,13 @@ a, .link-button {
 .button {
   font-weight: 600;
   font-size: 1.2em;
-  padding: 1rem;
+  padding: 1rem 2rem;
   color: var(--button-text);
   background-color: var(--button-background);
-  border-radius: 5px;
+  border: solid 3px var(--button-border);
+  border-radius: 50px;
   box-shadow: var(--box-shadow);
   cursor: pointer;
-  border: none;
   outline: none;
   transition: .2s ease-out background-color;
 }
