@@ -2,11 +2,11 @@
 
     import { computed, ref, onMounted } from 'vue'
 
-    let showForm = ref(false)
+    let showForm = ref(true)
 
-    onMounted(() => {
-        showForm.value = JSON.parse(localStorage.getItem("showForm"));
-    })
+    // onMounted(() => {
+    //     showForm.value = JSON.parse(localStorage.getItem("showForm"));
+    // })
 
     let email = ref("")
     let message = ref("")
@@ -32,6 +32,8 @@
         }
     }
 
+    let sending = ref(false)
+
     async function sendEmail(event) {
         event.preventDefault()
 
@@ -50,6 +52,12 @@
         if(error) {
             return
         }
+
+        if(sending.value) { // prevent spamming send button
+            return
+        }
+        
+        sending.value = true
 
         const data = {
             email: email.value,
@@ -76,7 +84,7 @@
             errorSending.value = true
         })
 
-        
+        sending.value = false
 
     }
 
@@ -115,7 +123,7 @@
 <style scoped lang="scss">
     section {
         
-        margin-top: 6rem;
+        margin-top: 8rem;
 
         h2, p {
             text-align: center;
@@ -133,13 +141,17 @@
 
     .button-container {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         gap: 1rem;
 
         .message-sent span{
             font-weight: 600;
             color: var(--text-color);
+        }
+
+        @media(min-width: 500px) {
+            flex-direction: row; 
         }
     }
 
