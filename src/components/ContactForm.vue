@@ -4,10 +4,6 @@
 
     let showForm = ref(true)
 
-    // onMounted(() => {
-    //     showForm.value = JSON.parse(localStorage.getItem("showForm"));
-    // })
-
     let email = ref("")
     let name = ref("")
     let message = ref("")
@@ -19,6 +15,9 @@
     let emailSent = ref(false)
     let errorSending = ref(false)
 
+    onMounted(() => {
+        emailSent.value = JSON.parse(sessionStorage.getItem("emailSent"));
+    })
 
     function clearError(field) {
         // emailSent.value = false
@@ -91,6 +90,7 @@
         }).then((response)=>{
             // console.log(response)
             emailSent.value = true
+            sessionStorage.setItem("emailSent", true);
         }).catch((error)=>{
             console.log(error)
             errorSending.value = true
