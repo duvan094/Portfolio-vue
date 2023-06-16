@@ -187,6 +187,8 @@
     textarea {
         min-width: 100%;
         min-height: 100px;
+        max-width: 100%;
+        max-height: 300px;
     }
 
 .input-field {
