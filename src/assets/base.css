@@ -37,8 +37,10 @@
 
   --input-background: #FAFFFD;
   --input-label-color: #0C0F0A;
+  --input-text-color: #0C0F0A;
   --input-focus-color: #00acc1;
   --input-focus-color-border: #b3dce1;
+  --input-error-color: #bb0000;
 
   --link-color: #508484;
   --link-color-opacity: #508484EE;
@@ -61,15 +63,18 @@
   --box-shadow: 0 5px 10px 0 rgba(0,0,0,.15);
 
   --selection-text-color: #FAFFFD;
-  --selection-bg-color: #499bd6;
+  --selection-bg-color: #0C0F0A;
 
   --tag-bg-color: #C3D7C5;
   --tag-text-color: var(--green-3);
 
-  --input-background: #FAFFFD;
+  --input-background: var(--dark-blue-2);
+  --input-background: var(--dark-blue-2);
+  --input-text-color: #FAFFFD;
   --input-label-color: #FAFFFD;
-  --input-focus-color-border: #00acc1;
-  --input-focus-color: #b3dce1;
+  --input-focus-color-border: #00c7e155;
+  --input-focus-color: #00c7e1;
+  --input-error-color: #eb0000;
 
   --button-text: #FAFFFD;
   --button-background: var(--green-2);

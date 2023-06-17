@@ -81,7 +81,7 @@
             cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
             credentials: "same-origin", // include, *same-origin, omit
             headers: {
-            "Content-Type": "application/json",
+                "Content-Type": "application/json",
             // 'Content-Type': 'application/x-www-form-urlencoded',
             },
             redirect: "follow", // manual, *follow, error
@@ -175,6 +175,7 @@
     input, textarea {
         padding: .5rem;
         border-radius: 10px;
+        color: var(--input-text-color);
         background-color: var(--input-background);
         border: 3px solid var(--link-color);
         box-shadow: var(--box-shadow-dark-theme);
@@ -182,6 +183,11 @@
         // transition: .2s ease-out border-color;
         font-size: 1.2em;
         width: 100%;
+
+        &::placeholder {
+            color: var(--input-text-color);
+            opacity: 0.6;
+        }
     }
 
     textarea {
@@ -207,7 +213,7 @@
 
     &.error {
         input, textarea {
-            border-color: #bb0000;
+            border-color: var(--input-error-color);
 
             animation: error .3s ease-in-out 1;
 
