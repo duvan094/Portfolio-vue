@@ -9,14 +9,14 @@
           <span>Hello there,</span> <span>I'm&nbsp;Jacob.</span>
         </h1>
         <p>I'm a UX focused frontend developer from Gothenburg, currently living in Jönköping, Sweden.</p>
-        <p>Currently I work as a System developer at <a href="https://www.zmarta.se/" target="_blank" rel="noopener noreferrer">Zmarta</a> where I mainly do frontend work, but occasionally some backend sprinkled here and there.</p>
+        <p>Currently working as a consultant at <a href="https://www.knowit.se/" target="_blank" rel="noopener noreferrer">Knowit</a>.</p>
         <p>Previously I've studied Graphic design and Web development at Jönköping University, where I graduated from in summer of 2019.</p>
-        <p>I am primarly a JavaScript developer and am used to working with frameworks such as Vue and React, but I also have experience with CMS (Content Management System), like Wordpress.</p>
+        <p>I am primarly a frontend developer and I am used to working with frameworks such as Vue and React, but I also have experience building Wordpress themes and some backend experience using Node.js/Express.js.</p>
         <p>In my spare time, I'm interested in photography, taking care of my plants, and running, as well the occasional beer brewing.</p>
       </div>
     </section>
     <ExpandableSection title="Developer tools">
-      <p>HTML, CSS, SCSS, JavaScript, Vue, React, Node.js, TypeScript, WordPress, PHP, SQL, Firebase, Git.</p>
+      <p>HTML, CSS, SCSS, JavaScript, Vue, React, Node.js, TypeScript, WordPress, Episerver CMS, Contentful, PHP, SQL, Firebase, Git.</p>
     </ExpandableSection>
     <ExpandableSection title="UX/UI tools">
       <p>Figma (Adobe XD, Sketch), Adobe Photoshop/Illustrator/InDesign.</p>
@@ -24,7 +24,10 @@
     <ExpandableSection title="Experience">
       <div class="small-text">
         <div class="content">
-            <p><b>Zmarta</b> · Oct. 2020 - present<br> Working on the Zmarta platform. My work mainly involves frontend work as well as some UX, but occasionally backend.</p>
+            <p><b>Knowit</b> · Aug. 2023 - present<br> Currently working as a consultant.</p>
+          </div>
+        <div class="content">
+            <p><b>Zmarta</b> · Oct. 2020 - Aug. 2023<br> Worked on the Zmarta platform. My work mainly involved frontend work as well as some UX, but occasionally backend. Mainly using Vue, Node.js.</p>
           </div>
           <div class="content">
             <p><b>Tross</b> · Mar. 2019 - Oct. 2020<br>An advertising agency located in Jönköping. I worked at the web department and projects mainly involved building WordPress themes, but also occasional web apps with React.</p>
@@ -62,14 +65,14 @@
         <ExternalLink title="LinkedIn" link="https://www.linkedin.com/in/jacobduvander/"/>
       </div>
     </section>
-    <section>
+<!--     <section>
       <h2>Resumé</h2>
       <p>Check out my full CV down below 👇</p>
       <div class="links">
         <a href="/cv-en.pdf" target="_blank">CV - English version</a>
         <a href="/cv-sv.pdf" target="_blank">CV - Swedish version</a>
       </div>
-    </section>
+    </section> -->
   </main>
 </template>
 
