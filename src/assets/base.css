@@ -3,6 +3,7 @@
 /* semantic color variables for this project */
 :root {
   /*Color Scheme*/
+  
   --dark-blue-1: #262B44;
   --dark-blue-2: #303D54;
   --dark-blue-3: #3B5364;
@@ -42,6 +43,8 @@
   --input-focus-color-border: #b3dce1;
   --input-error-color: #bb0000;
 
+  --info-background: #FAFFFDaa;
+
   --link-color: #508484;
   --link-color-opacity: #508484EE;
   --link-color-hover: #2e5050;
@@ -69,12 +72,14 @@
   --tag-text-color: var(--green-3);
 
   --input-background: var(--dark-blue-2);
-  --input-background: var(--dark-blue-2);
   --input-text-color: #FAFFFD;
   --input-label-color: #FAFFFD;
   --input-focus-color-border: #00c7e155;
   --input-focus-color: #00c7e1;
   --input-error-color: #eb0000;
+
+  --info-background: #303D54aa;
+  --info-background: #151825aa;
 
   --button-text: #FAFFFD;
   --button-background: var(--green-2);
@@ -231,6 +236,41 @@ a, .link-button {
   transition: .2s ease-out background-color;
 }
 
+.button.loading {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1rem;
+  color: var(--button-background);
+}
+
+.button.loading::before {
+  content: "";
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+  animation: 1.2s linear infinite spin;
+
+  border: 0.2rem solid #fff;
+  border-color: #fff transparent #fff transparent;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%,-50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%,-50%) rotate(360deg);
+  }
+}
+
 .button:hover {
   background-color: var(--button-background-hover);
 }
@@ -311,6 +351,6 @@ a:hover:before, .link-button:hover:before{
   }
 }
 
-.sr-only{
+.sr-only {
   display: none;
 }

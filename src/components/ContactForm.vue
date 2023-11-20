@@ -121,7 +121,7 @@
                 <textarea :disabled="emailSent" type="text" maxlength="400" id="message" name="message" placeholder="ex. Hello! Nice website!" v-model="message" @input="clearError('message')"/>
             </div>
             <div class="button-container">
-                <button type="submit" class="button" :disabled="sending || emailSent">
+                <button type="submit" class="button" :class="{'loading': sending}"  :disabled="sending || emailSent">
                     Send message
                 </button>
                 <div v-if="emailSent" class="message-sent">

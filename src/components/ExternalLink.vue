@@ -11,7 +11,7 @@
   import EmailIcon from './icons/EmailIcon.vue';
 
   export default {
-    name: 'MainHeader',
+    name: 'ExternalLink',
     components: {
         HyperLinkIcon,
         EmailIcon
