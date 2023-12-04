@@ -16,7 +16,7 @@
       </div>
     </section>
     <ExpandableSection title="Developer tools">
-      <p>HTML, CSS, SCSS, JavaScript, Vue, React, Node.js, TypeScript, WordPress, Episerver CMS, Contentful, PHP, SQL, Firebase, Git.</p>
+      <p>HTML, CSS, SCSS, JavaScript, Vue, React, Next.js, Node.js, TypeScript, WordPress, Episerver CMS, Contentful, PHP, SQL, Firebase, Git.</p>
     </ExpandableSection>
     <ExpandableSection title="UX/UI tools">
       <p>Figma (Adobe XD, Sketch), Adobe Photoshop/Illustrator/InDesign.</p>
@@ -24,7 +24,7 @@
     <ExpandableSection title="Experience">
       <div class="small-text">
         <div class="content">
-            <p><b>Knowit</b> · Aug. 2023 - present<br> Currently working as a consultant.</p>
+            <p><b>Knowit</b> · Aug. 2023 - present<br> Currently working as a Web developer/Consultant. Primarly working with React, Next.js and WordPress / PHP. Also occassionally doing UX/UI when needed.</p>
           </div>
         <div class="content">
             <p><b>Zmarta</b> · Oct. 2020 - Aug. 2023<br> Worked on the Zmarta platform. My work mainly involved frontend work as well as some UX, but occasionally backend. Mainly using Vue, Node.js.</p>
