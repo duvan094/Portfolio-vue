@@ -1,5 +1,6 @@
 <script setup>
 
+    import SuccessConfetti from './SuccessConfetti.vue';
     import { computed, ref, onMounted } from 'vue'
 
     let showForm = ref(true)
@@ -14,6 +15,8 @@
 
     let emailSent = ref(false)
     let errorSending = ref(false)
+
+    let showConfetti = ref(false)
 
     onMounted(() => {
         emailSent.value = JSON.parse(sessionStorage.getItem("emailSent"));
@@ -90,19 +93,28 @@
         }).then((response)=>{
             // console.log(response)
             emailSent.value = true
+            showConfetti.value = true
             sessionStorage.setItem("emailSent", true);
         }).catch((error)=>{
             console.log(error)
             errorSending.value = true
         })
 
+
         sending.value = false
 
+    }
+
+
+    function hideConfetti () {
+        showConfetti.value = false
+        console.log('hide')
     }
 
 </script>
 
 <template>
+    <SuccessConfetti v-if="showConfetti" @confettiVisible="hideConfetti" />
     <template v-if="!showForm"></template>
     <section v-else>
         <h2>Send me a message ✉️</h2>
