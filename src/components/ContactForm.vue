@@ -136,7 +136,7 @@
                 <button type="submit" class="button" :class="{'loading': sending}"  :disabled="sending || emailSent">
                     Send message
                 </button>
-                <div v-if="true || emailSent" class="message-status success">
+                <div v-if="emailSent" class="message-status success">
                     <span>Message sent!</span>
                 </div>
                 <div v-else-if="errorSending" class="message-status">
