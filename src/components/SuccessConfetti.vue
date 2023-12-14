@@ -46,6 +46,10 @@ onMounted(async () => {
     }
 
     function wallHit(ball, canvasRef){
+        if(ball.opacity <= 0) {
+            return true
+        }
+
         if(((ball.x+ball.radius)>=canvasRef.width || (ball.x-ball.radius)<=0) && (ball.y-ball.radius)<=0){	//If 
             return true
         }else	if((ball.x+ball.radius)>=canvasRef.width || (ball.x-ball.radius)<=0){

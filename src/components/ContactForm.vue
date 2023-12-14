@@ -97,7 +97,9 @@
             showConfetti.value = true
             sessionStorage.setItem("emailSent", true);
         }).catch((error)=>{
-            console.log(error)
+            if(window.location.hostname === 'localhost') {
+                showConfetti.value = true
+            }
             errorSending.value = true
         })
 
