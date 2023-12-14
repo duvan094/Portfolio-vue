@@ -124,10 +124,10 @@
                 <button type="submit" class="button" :class="{'loading': sending}"  :disabled="sending || emailSent">
                     Send message
                 </button>
-                <div v-if="emailSent" class="message-sent">
+                <div v-if="true || emailSent" class="message-status success">
                     <span>Message sent!</span>
                 </div>
-                <div v-else-if="errorSending" class="message-sent">
+                <div v-else-if="errorSending" class="message-status">
                     <span>Something went wrong :(</span>
                 </div>
             </div>
@@ -162,9 +162,23 @@
         gap: 1rem;
         margin-top: 1rem;
 
-        .message-sent span{
-            font-weight: 600;
-            color: var(--text-color);
+        .message-status {
+            span{
+                display: flex;
+                align-items: center;
+                font-weight: 600;
+                color: var(--text-color);
+            }
+
+            &.success {
+                span {
+                    &::after {
+                        content: "🎉";
+                        font-size: 2rem;
+                        margin-left: 1rem;
+                    }
+                }
+            }
         }
 
         @media(min-width: 500px) {

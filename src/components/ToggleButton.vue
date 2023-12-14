@@ -19,7 +19,6 @@ defineEmits(['toggle'])
             <span v-if="toggleOff" class="toggle-text toggleOff">{{ toggleOff }}</span>
         </div>
     </button>
-
 </template>
 
 <style scoped lang="scss">
