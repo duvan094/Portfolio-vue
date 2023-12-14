@@ -46,8 +46,6 @@
         event.preventDefault()
 
 
-        showConfetti.value = true
-
         let error = false
 
         if(!email.value) {
@@ -81,7 +79,7 @@
             message: message.value
         }
 
-/*         await fetch('https://jacobduvander.se/.netlify/functions/sendEmail', {
+        await fetch('https://jacobduvander.se/.netlify/functions/sendEmail', {
             method: "POST", // *GET, POST, PUT, DELETE, etc.
             mode: "cors", // no-cors, *cors, same-origin
             cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -101,7 +99,7 @@
         }).catch((error)=>{
             console.log(error)
             errorSending.value = true
-        }) */
+        })
 
 
         sending.value = false
