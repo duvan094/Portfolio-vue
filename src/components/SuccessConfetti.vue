@@ -83,6 +83,14 @@ onMounted(async () => {
     Render()
 
 
+    function resizeWindow(event){
+        event.preventDefault()
+        if(canvas?.value?.width && canvas?.value?.height) {
+            canvas.value.width = window.innerWidth
+            canvas.value.height = window.innerHeight
+        }
+    }
+
     window.addEventListener('resize', resizeWindow)
 
 
@@ -104,13 +112,6 @@ function getRandomColor(){//A function for generating a random color.
   return color;
 }
 
-function resizeWindow(event){
-    event.preventDefault()
-    canvas.value.width = window.innerWidth
-    canvas.value.height = window.innerHeight
-}
-
-
 
 </script>
 
@@ -129,5 +130,6 @@ function resizeWindow(event){
         pointer-events: none;
         width: 100%;
         height: 100%;
+        z-index: 100000;
     }
 </style>
