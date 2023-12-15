@@ -15,14 +15,15 @@ onMounted(async () => {
     let balls = [];
     const nbrOfBalls = 200;//Change for more balls
 
-    const Ball = function(x, y, dx, dy, radius, speed, maxSpeed, color, opacitySpeed = 0) {//Object describing a ball
+    const Ball = function(x, y, dx, dy, radius, speed, gravity, spread, color, opacitySpeed = 0) {//Object describing a ball
         this.x = x;
         this.y = y;
         this.dx = dx;
         this.dy = dy;
         
         this.radius = radius;
-        this.maxSpeed = maxSpeed;
+        this.gravity = gravity;
+        this.spread = spread;
         this.currentSpeed = speed;
         this.color = color;
         this.opacity = 1;
@@ -37,18 +38,15 @@ onMounted(async () => {
             ctx.fill();
         }
         this.move = function(){
-            this.x += this.maxSpeed * this.dx;
+            this.x += this.spread * this.dx;
 
-            if(this.dy >= this.maxSpeed) {
-                this.dy = this.maxSpeed
+            if(this.dy >= this.gravity) {
+                this.dy = this.gravity
             } else {
                 this.dy += 0.1
             }
 
-            this.y += this.currentSpeed * this.dy
-            // this.y += this.currentSpeed * (this.reachedTop ? Math.abs(this.dy) : this.dy)/*  *  */
-
-            //this.y += enableGravity ? Math.abs((this.speed * (this.dy)) * this.upOrDown) : (this.speed * (this.dy)) * this.upOrDown
+            this.y += this.dy
         }
     }
 
@@ -57,14 +55,13 @@ onMounted(async () => {
         let yDir = Math.random()*2-1;
 
         const speed = Math.random()*2+5
-        const maxSpeed = 10
+        const gravity = 10
+        const spread = 5
 
         // Set initial upward velocity if ball is going upward
-        if(yDir < 0) {
-            yDir *= maxSpeed
-        }
-
-        balls.push(new Ball(canvas.value.width / 2, canvas.value.height / 10, xDir, yDir, 3, speed, maxSpeed, getRandomColor(), 0.005));  
+        yDir *= speed
+        
+        balls.push(new Ball(canvas.value.width / 2, canvas.value.height / 10, xDir, yDir, 3, speed, gravity, spread, getRandomColor(), 0.005));  
     }
 
     function wallHit(ball, canvasRef){
@@ -92,11 +89,11 @@ onMounted(async () => {
 
 
         for(let i = 0; i<balls.length;i++){
-            balls[i].move();//change position
             balls[i].draw();//draw new position
             if(wallHit(balls[i], canvas.value)) {
                 ballsOutOfBounds.push(balls[i])
             }
+            balls[i].move();//change position
         }
         
         if(ballsOutOfBounds.length !== balls.length) {
