@@ -15,16 +15,19 @@ onMounted(async () => {
     let balls = [];
     const nbrOfBalls = 200;//Change for more balls
 
-    const Ball = function(x, y, dx, dy, radius, speed, color, opacitySpeed = 0) {//Object describing a ball
+    const Ball = function(x, y, dx, dy, radius, speed, maxSpeed, color, opacitySpeed = 0) {//Object describing a ball
         this.x = x;
         this.y = y;
         this.dx = dx;
         this.dy = dy;
         
         this.radius = radius;
-        this.speed = speed;
+        this.maxSpeed = maxSpeed;
+        this.currentSpeed = speed;
         this.color = color;
         this.opacity = 1;
+        this.reachedTop = false
+
         this.draw = function(){
             ctx.beginPath();
             ctx.fillStyle = this.color;
@@ -34,15 +37,34 @@ onMounted(async () => {
             ctx.fill();
         }
         this.move = function(){
-            this.x += this.speed * (this.dx*Math.random()*this.speed);
-            this.y += this.speed * (this.dy*Math.random()*this.speed);
+            this.x += this.maxSpeed * this.dx;
+
+            if(this.dy >= this.maxSpeed) {
+                this.dy = this.maxSpeed
+            } else {
+                this.dy += 0.1
+            }
+
+            this.y += this.currentSpeed * this.dy
+            // this.y += this.currentSpeed * (this.reachedTop ? Math.abs(this.dy) : this.dy)/*  *  */
+
+            //this.y += enableGravity ? Math.abs((this.speed * (this.dy)) * this.upOrDown) : (this.speed * (this.dy)) * this.upOrDown
         }
     }
 
     for(let i = 0; i < nbrOfBalls; i++){//Initiate the ball array
         const xDir = Math.random()*2-1;
-        const yDir = Math.random()*2-1;
-        balls.push(new Ball(canvas.value.width / 2, 0, xDir, yDir, 3, 5,getRandomColor(), 0.01));  
+        let yDir = Math.random()*2-1;
+
+        const speed = Math.random()*2+5
+        const maxSpeed = 10
+
+        // Set initial upward velocity if ball is going upward
+        if(yDir < 0) {
+            yDir *= maxSpeed
+        }
+
+        balls.push(new Ball(canvas.value.width / 2, canvas.value.height / 10, xDir, yDir, 3, speed, maxSpeed, getRandomColor(), 0.005));  
     }
 
     function wallHit(ball, canvasRef){
@@ -67,12 +89,13 @@ onMounted(async () => {
         //ctx.fillRect(0,0,canvas.width,canvas.height);
         
         const ballsOutOfBounds = []
-        
+
+
         for(let i = 0; i<balls.length;i++){
             balls[i].move();//change position
             balls[i].draw();//draw new position
             if(wallHit(balls[i], canvas.value)) {
-            ballsOutOfBounds.push(balls[i])
+                ballsOutOfBounds.push(balls[i])
             }
         }
         
@@ -85,8 +108,7 @@ onMounted(async () => {
     }
 
     Render()
-
-
+    
     function resizeWindow(event){
         event.preventDefault()
         if(canvas?.value?.width && canvas?.value?.height) {
