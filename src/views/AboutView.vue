@@ -63,6 +63,7 @@
         <ExternalLink title="Email" link="mailto:jacobduvander@gmail.com" :email="true"/>
         <ExternalLink title="Github" link="https://github.com/duvan094"/>
         <ExternalLink title="LinkedIn" link="https://www.linkedin.com/in/jacobduvander/"/>
+        <ExternalLink title="CodePen" link="https://codepen.io/duvander" />
       </div>
     </section>
 <!--     <section>
