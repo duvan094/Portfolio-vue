@@ -37,6 +37,7 @@ function scrollToTop(){
         <div class="link-group">
           <ExternalLink title="Wasted time" link="https://wastedtime.jacobduvander.se"/>
           <ExternalLink title="Quiz" link="https://quiz.jacobduvander.se/"/>
+          <ExternalLink title="3d portfolio" link="https://te3b.jacobduvander.se/"/>
         </div>
         <TitleTag text="2018"/>
         <div class="link-group">
