@@ -119,34 +119,37 @@
     <SuccessConfetti v-if="showConfetti" @confettiVisible="hideConfetti" />
     <template v-if="!showForm"></template>
     <section v-else>
-        <h2>Send me a message ✉️</h2>
-        <p>Feel free to send me a message, I'll reply as soon as possible.</p>
-        <form @submit.prevent="sendEmail" class="form" :class="{'sending': sending, 'emailSent': emailSent}">
-            <div class="input-field" :class="{'error': nameError}">
-                <label for="message">Name</label>
-                <input type="text" :disabled="emailSent" maxlength="40" id="name" name="name" placeholder="ex. Jacob Duvander" v-model="name" @input="clearError('name')"/>
-            </div>
-            <div class="input-field" :class="{'error': emailError}">
-                <label for="email">Your email</label>
-                <input type="email" :disabled="emailSent" maxlength="50" id="email" name="email" placeholder="ex. jacobduvander@gmail.com" v-model="email" @input="clearError('email')"/>
-            </div>
-            <div class="input-field" :class="{'error': messageError}">
-                <label for="message">Message</label>
-                <textarea :disabled="emailSent" type="text" maxlength="400" id="message" name="message" placeholder="ex. Hello! Nice website!" v-model="message" @input="clearError('message')"/>
-            </div>
-            <div class="button-container">
-                <button type="submit" class="button" :class="{'loading': sending}"  :disabled="sending || emailSent">
-                    Send message
-                </button>
-                <div v-if="emailSent" class="message-status success">
-                    <span>Message sent!</span>
+        <div class="inner-section">
+            <h2>Send me a message ✉️</h2>
+            <p>Feel free to send me a message, I'll reply as soon as possible.</p>
+            <form @submit.prevent="sendEmail" class="form" :class="{'sending': sending, 'emailSent': emailSent}">
+                <div class="input-field" :class="{'error': nameError}">
+                    <label for="message">Name</label>
+                    <input type="text" :disabled="emailSent" maxlength="40" id="name" name="name" placeholder="ex. Jacob Duvander" v-model="name" @input="clearError('name')"/>
                 </div>
-                <div v-else-if="errorSending" class="message-status">
-                    <span>Something went wrong :(</span>
+                <div class="input-field" :class="{'error': emailError}">
+                    <label for="email">Your email</label>
+                    <input type="email" :disabled="emailSent" maxlength="50" id="email" name="email" placeholder="ex. jacobduvander@gmail.com" v-model="email" @input="clearError('email')"/>
                 </div>
-            </div>
+                <div class="input-field" :class="{'error': messageError}">
+                    <label for="message">Message</label>
+                    <textarea :disabled="emailSent" type="text" maxlength="400" id="message" name="message" placeholder="ex. Hello! Nice website!" v-model="message" @input="clearError('message')"/>
+                </div>
+                <div class="button-container">
+                    <button type="submit" class="button button--ripple" :class="{'loading': sending}"  :disabled="sending || emailSent">
+                        Send message
+                        <span class="button--ripple__pulse"></span>
+                    </button>
+                    <div v-if="emailSent" class="message-status success">
+                        <span>Message sent!</span>
+                    </div>
+                    <div v-else-if="errorSending" class="message-status">
+                        <span>Something went wrong :(</span>
+                    </div>
+                </div>
 
-        </form> 
+            </form> 
+        </div>
     </section>
 </template>
 

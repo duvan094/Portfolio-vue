@@ -1,69 +1,77 @@
 <template>
   <main>
     <section class="main-section">
-      <div class="profile">
-        <RoundPicture imageLink="profile.jpg" altText="Profile picture of me"/>
-      </div>
-      <div>
-        <h1 tabindex="-1" id="about-me" class="animate-text">
-          <span>Hello there,</span> <span>I'm&nbsp;Jacob.</span>
-        </h1>
-        <p>I'm a UX focused frontend developer from Gothenburg, currently living in Jönköping, Sweden.</p>
-        <p>Currently working as a consultant at <a href="https://www.knowit.se/" target="_blank" rel="noopener noreferrer">Knowit</a>.</p>
-        <p>Previously I've studied Graphic design and Web development at Jönköping University, where I graduated from in summer of 2019.</p>
-        <p>I am primarly a frontend developer and I am used to working with frameworks such as Vue and React, but I also have experience building Wordpress themes and some backend experience using Node.js/Express.js.</p>
-        <p>In my spare time, I'm interested in photography, taking care of my plants, and running, as well the occasional beer brewing.</p>
+      <div class="inner-section">
+        <div class="profile">
+          <RoundPicture imageLink="profile.jpg" altText="Profile picture of me"/>
+        </div>
+        <div>
+          <h1 tabindex="-1" id="about-me" class="animate-text">
+            <span>Hello there,</span> <span>I'm&nbsp;Jacob.</span>
+          </h1>
+          <p>I'm a UX focused frontend developer from Gothenburg, currently living in Jönköping, Sweden.</p>
+          <p>Currently working as a consultant at <a href="https://www.knowit.se/" target="_blank" rel="noopener noreferrer">Knowit</a>.</p>
+          <p>Previously I've studied Graphic design and Web development at Jönköping University, where I graduated from in summer of 2019.</p>
+          <p>I am primarly a frontend developer and I am used to working with frameworks such as Vue and React, but I also have experience building Wordpress themes and some backend experience using Node.js/Express.js.</p>
+          <p>In my spare time, I'm interested in photography, taking care of my plants, and running, as well the occasional beer brewing.</p>
+        </div>
       </div>
     </section>
-    <ExpandableSection title="Developer tools">
-      <p>HTML, CSS, SCSS, JavaScript, Vue, React, Next.js, Node.js, TypeScript, WordPress, Episerver CMS, Contentful, PHP, SQL, Firebase, Git.</p>
-    </ExpandableSection>
-    <ExpandableSection title="UX/UI tools">
-      <p>Figma (Adobe XD, Sketch), Adobe Photoshop/Illustrator/InDesign.</p>
-    </ExpandableSection>
-    <ExpandableSection title="Experience">
-      <div class="small-text">
-        <div class="content">
-            <p><b>Knowit</b> · Aug. 2023 - present<br> Currently working as a Web developer/Consultant. Primarly working with React, Next.js and WordPress / PHP. Also occassionally doing UX/UI when needed.</p>
-          </div>
-        <div class="content">
-            <p><b>Zmarta</b> · Oct. 2020 - Aug. 2023<br> Worked on the Zmarta platform. My work mainly involved frontend work as well as some UX, but occasionally backend. Mainly using Vue, Node.js.</p>
-          </div>
-          <div class="content">
-            <p><b>Tross</b> · Mar. 2019 - Oct. 2020<br>An advertising agency located in Jönköping. I worked at the web department and projects mainly involved building WordPress themes, but also occasional web apps with React.</p>
-        </div>
-        <div class="content">
-          <p><b>Trustcruit</b> · Jan. 2018 - Sep. 2018<br>An extra job after school hours building a WordPress theme.</p>
-        </div>
-        <div class="content">
-          <p><b>Hype reklambyrå</b> · Feb. 2017 - Jan. 2018<br>Hype is a student driven nonprofit advertising agency at Jönköping University where I worked as an Art Director.</p>
-        </div>
-        <div class="content">
-          <p><b>Jönköping University</b> · Sep. 2017 - Dec. 2017<br>Lab assistant in a Web developing course throughout a semester. Work involved helping students with Wordpress and JavaScript.</p>
-        </div>
-      </div>
-    </ExpandableSection>
-    <ExpandableSection title="Education">
-      <div class="small-text">
-        <div class="content">
-          <p><b>Jönköping University</b> · 2016 - 2019<br>Bachelor degree in informatics. Specialization in Graphic Design and Web development.</p>
-        </div>
-        <div class="content">
-          <p><b>Chalmers University of Technology</b> · 2014 - 2016<br>Software engineering. Programming primarily with Java, but also Assembler and C.</p>
-        </div>
-        <div class="content">
-          <p><b>Lerums Gymnasium</b> · 2010 - 2013<br>Studied a Media Technology program. My first introduction to Adobe collection and web development.</p>
-        </div>
-      </div>
-    </ExpandableSection>
     <section>
-      <h2>Socials</h2>
-      <p>Feel free to reach out to me on social media.</p>
-      <div class="links">
-        <ExternalLink title="Email" link="mailto:jacobduvander@gmail.com" :email="true"/>
-        <ExternalLink title="Github" link="https://github.com/duvan094"/>
-        <ExternalLink title="LinkedIn" link="https://www.linkedin.com/in/jacobduvander/"/>
-        <ExternalLink title="CodePen" link="https://codepen.io/duvander" />
+      <div class="inner-section">
+        <ExpandableSection title="Developer tools">
+          <p>HTML, CSS, SCSS, JavaScript, Vue, React, Next.js, Node.js, TypeScript, WordPress, Episerver CMS, Contentful, PHP, SQL, Firebase, Git.</p>
+        </ExpandableSection>
+        <ExpandableSection title="UX/UI tools">
+          <p>Figma (Adobe XD, Sketch), Adobe Photoshop/Illustrator/InDesign.</p>
+        </ExpandableSection>
+        <ExpandableSection title="Experience">
+          <div class="small-text">
+            <div class="content">
+                <p><b>Knowit</b> · Aug. 2023 - present<br> Currently working as a Web developer/Consultant. Primarly working with React, Next.js and WordPress / PHP. Also occassionally doing UX/UI when needed.</p>
+              </div>
+            <div class="content">
+                <p><b>Zmarta</b> · Oct. 2020 - Aug. 2023<br> Worked on the Zmarta platform. My work mainly involved frontend work as well as some UX, but occasionally backend. Mainly using Vue, Node.js.</p>
+              </div>
+              <div class="content">
+                <p><b>Tross</b> · Mar. 2019 - Oct. 2020<br>An advertising agency located in Jönköping. I worked at the web department and projects mainly involved building WordPress themes, but also occasional web apps with React.</p>
+            </div>
+            <div class="content">
+              <p><b>Trustcruit</b> · Jan. 2018 - Sep. 2018<br>An extra job after school hours building a WordPress theme.</p>
+            </div>
+            <div class="content">
+              <p><b>Hype reklambyrå</b> · Feb. 2017 - Jan. 2018<br>Hype is a student driven nonprofit advertising agency at Jönköping University where I worked as an Art Director.</p>
+            </div>
+            <div class="content">
+              <p><b>Jönköping University</b> · Sep. 2017 - Dec. 2017<br>Lab assistant in a Web developing course throughout a semester. Work involved helping students with Wordpress and JavaScript.</p>
+            </div>
+          </div>
+        </ExpandableSection>
+        <ExpandableSection title="Education">
+          <div class="small-text">
+            <div class="content">
+              <p><b>Jönköping University</b> · 2016 - 2019<br>Bachelor degree in informatics. Specialization in Graphic Design and Web development.</p>
+            </div>
+            <div class="content">
+              <p><b>Chalmers University of Technology</b> · 2014 - 2016<br>Software engineering. Programming primarily with Java, but also Assembler and C.</p>
+            </div>
+            <div class="content">
+              <p><b>Lerums Gymnasium</b> · 2010 - 2013<br>Studied a Media Technology program. My first introduction to Adobe collection and web development.</p>
+            </div>
+          </div>
+        </ExpandableSection>
+      </div>
+    </section>
+    <section>
+      <div class="inner-section">
+        <h2>Socials</h2>
+        <p>Feel free to reach out to me on social media.</p>
+        <div class="links">
+          <ExternalLink title="Email" link="mailto:jacobduvander@gmail.com" :email="true"/>
+          <ExternalLink title="Github" link="https://github.com/duvan094"/>
+          <ExternalLink title="LinkedIn" link="https://www.linkedin.com/in/jacobduvander/"/>
+          <ExternalLink title="CodePen" link="https://codepen.io/duvander" />
+        </div>
       </div>
     </section>
 <!--     <section>
@@ -88,6 +96,10 @@ import RoundPicture from '../components/RoundPicture.vue'
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
+  }
+
+  .main-section {
+    padding-top: 6rem;
   }
 
 /*   .main-section {

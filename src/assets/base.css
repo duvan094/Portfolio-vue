@@ -132,6 +132,14 @@ section {
   margin-bottom: 2rem;
 }
 
+
+section > .inner-section {
+    padding: 0 2rem;
+    width: 100%;
+    max-width: 720px;
+    margin: auto;
+}
+
 section:last-child {
   margin-bottom: 0;
 }

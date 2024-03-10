@@ -60,10 +60,7 @@ function changeTheme(savedTheme = null, initial = false) {
     flex-direction: column;
     justify-content: center;
     min-height: calc(100vh - 157px);
-    margin: 0 auto;
-    padding: 6rem 2rem;
     width: 100%;
-    max-width: 720px;
   }
 
   footer {
@@ -73,21 +70,9 @@ function changeTheme(savedTheme = null, initial = false) {
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    padding-top: 8rem;
     text-align: center;
     color: var(--text-color);
   }
-
-/*   .border {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: calc(100% - 1rem);
-    height: calc(100% - 1rem);
-    transform: translate(-50%, -50%);
-    z-index: 10000;
-    pointer-events: none;
-    border-radius: 2rem;
-    box-shadow: 0 0 0 2rem var(--header-bg-color);
-  } */
 
 </style>
