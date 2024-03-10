@@ -6,11 +6,13 @@ import ThreeJs from '../components/ThreeJS.vue'
 <template>
   <main>
     <section>
-      <ThreeJs />
-      <div class="text-404">
-        <h1 tabindex="-1" id="welcome">404 - Page not found :(</h1>
-        <p>We couldn't find the page you were looking for...</p>
-        <p><RouterLink tabindex="0" to="/">Go back to the start page</RouterLink></p>
+      <div class="inner-section">
+        <ThreeJs />
+        <div class="text-404">
+          <h1 tabindex="-1" id="welcome">404 - Page not found :(</h1>
+          <p>We couldn't find the page you were looking for...</p>
+          <p><RouterLink tabindex="0" to="/">Go back to the start page</RouterLink></p>
+        </div>
       </div>
     </section>
   </main>
