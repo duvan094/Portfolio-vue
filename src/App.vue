@@ -45,9 +45,9 @@ function changeTheme(savedTheme = null, initial = false) {
   <!--   <div class="border"></div> -->
   <ScrollToContent />
   <MainHeader />
-  <div class="page-wrapper">
+  <main>
     <RouterView />
-  </div>
+  </main>
   <footer>
     <ToggleButton @toggle="changeTheme()" :toggled="darkTheme" title="Dark mode" toggleOn="On" toggleOff="Off"/>
     Copyright © {{ new Date().getFullYear()}} Jacob Duvander {{ emoji }}
@@ -55,10 +55,7 @@ function changeTheme(savedTheme = null, initial = false) {
 </template>
 
 <style scoped lang="scss">
-  .page-wrapper{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
+  main {
     min-height: calc(100vh - 157px);
     width: 100%;
   }
