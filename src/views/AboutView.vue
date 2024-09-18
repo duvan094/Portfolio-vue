@@ -15,7 +15,7 @@
           <span>Hello there,</span> <span>I'm&nbsp;Jacob.</span>
         </h1>
         <p>I'm a UX focused frontend developer from Gothenburg, currently living in Jönköping, Sweden.</p>
-        <p>Currently working as a consultant at <a href="https://www.knowit.se/" target="_blank" rel="noopener noreferrer">Knowit</a>.</p>
+        <p>Currently I am working as a consultant at <a href="https://knowitexperience.com/" target="_blank" rel="noopener noreferrer">Knowit&nbsp;Experience</a>.</p>
         <p>Previously I've studied Graphic design and Web development at Jönköping University, where I graduated from in summer of 2019.</p>
         <p>I am primarly a frontend developer and I am used to working with frameworks such as Vue and React, but I also have experience building Wordpress themes and some backend experience using Node.js/Express.js.</p>
         <p>In my spare time, I'm interested in photography, taking care of my plants, and running, as well the occasional beer brewing.</p>
@@ -33,7 +33,7 @@
       <ExpandableSection title="Experience">
         <div class="small-text">
           <div class="content">
-              <p><b>Knowit</b> · Aug. 2023 - present<br> Currently working as a Web developer/Consultant. Primarly working with React, Next.js and WordPress / PHP. Also occassionally doing UX/UI when needed.</p>
+              <p><b>Knowit Experience</b> · Aug. 2023 - present<br> Currently working as a Web developer/Consultant. Primarly working with React, Next.js and WordPress / PHP. Also occassionally doing UX/UI when needed.</p>
             </div>
           <div class="content">
               <p><b>Zmarta</b> · Oct. 2020 - Aug. 2023<br> Worked on the Zmarta platform. My work mainly involved frontend work as well as some UX, but occasionally backend. Mainly using Vue, Node.js.</p>
