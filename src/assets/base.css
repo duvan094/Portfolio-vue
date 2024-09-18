@@ -5,7 +5,7 @@
   /*Color Scheme*/
   
   --dark-blue-1: #262B44;
-  --dark-blue-2: #303D54;
+  --dark-blue-2: hsl(217, 27%, 27%);
   --dark-blue-3: #3B5364;
   --green-3: #456A74;
   --green-2: #508484;
@@ -19,6 +19,8 @@
   /*Colors*/
   --main-bg-color: #FAFFFD;
   --exandable-section-bg: #f8f8f8;
+  --border-expandable-content: #e8e8e8;
+
   --exandable-section-shadow: none;
   --exandable-section-bg-hover: #f4f4f4;
   --header-bg-color: #508484;
@@ -59,6 +61,7 @@
   --main-bg-color: var(--dark-blue-1);
   --exandable-section-bg: var(--dark-blue-2);
   --exandable-section-bg-hover: var(--dark-blue-3);
+  --border-expandable-content: var(--dark-blue-3);
   --exandable-section-shadow: 0 5px 10px 0 rgba(0,0,0,.15);
   --header-bg-color: var(--dark-blue-2);
   --header-mobile-background: #303D54ee;
@@ -186,6 +189,10 @@ p {
   font-weight: 400;
   color: var(--text-color);
   margin-bottom: 1rem;
+}
+
+small {
+  color: var(--text-color);
 }
 
 p:last-child {

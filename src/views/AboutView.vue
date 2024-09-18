@@ -31,37 +31,55 @@
         <p>Figma (Adobe XD, Sketch), Adobe Photoshop/Illustrator/InDesign.</p>
       </ExpandableSection>
       <ExpandableSection title="Experience">
-        <div class="small-text">
+        <div>
           <div class="content">
-              <p><b>Knowit Experience</b> · Aug. 2023 - present<br> Currently working as a Web developer/Consultant. Primarly working with React, Next.js and WordPress / PHP. Also occassionally doing UX/UI when needed.</p>
+              <h4>Knowit Experience</h4>
+              <small class="date">August 2023 - present</small>
+              <p class="small">Currently working as a Web developer/Consultant. Primarly working with React, Next.js and WordPress / PHP. Also occassionally doing UX/UI when needed.</p>
             </div>
           <div class="content">
-              <p><b>Zmarta</b> · Oct. 2020 - Aug. 2023<br> Worked on the Zmarta platform. My work mainly involved frontend work as well as some UX, but occasionally backend. Mainly using Vue, Node.js.</p>
+              <h4>Zmarta</h4>
+              <small class="date">October 2020 - August 2023</small>
+              <p class="small">Worked on the Zmarta platform. My work mainly involved frontend work as well as some UX, but occasionally backend. Mainly using Vue, Node.js.</p>
             </div>
             <div class="content">
-              <p><b>Tross</b> · Mar. 2019 - Oct. 2020<br>An advertising agency located in Jönköping. I worked at the web department and projects mainly involved building WordPress themes, but also occasional web apps with React.</p>
+              <h4>Tross</h4>
+              <small class="date">March 2019 - October 2020</small>
+              <p class="small">An advertising agency located in Jönköping. I worked at the web department and projects mainly involved building WordPress themes, but also occasional web apps with React.</p>
           </div>
           <div class="content">
-            <p><b>Trustcruit</b> · Jan. 2018 - Sep. 2018<br>An extra job after school hours building a WordPress theme.</p>
+            <h4>Trustcruit</h4>
+            <small class="date">January 2018 - September 2018</small>
+            <p class="small">An extra job after school hours building a WordPress theme.</p>
           </div>
           <div class="content">
-            <p><b>Hype reklambyrå</b> · Feb. 2017 - Jan. 2018<br>Hype is a student driven nonprofit advertising agency at Jönköping University where I worked as an Art Director.</p>
+            <h4>Hype reklambyrå</h4>
+            <small class="date">February 2017 - January 2018</small>
+            <p class="small">Hype is a student driven nonprofit advertising agency at Jönköping University where I worked as an Art Director.</p>
           </div>
           <div class="content">
-            <p><b>Jönköping University</b> · Sep. 2017 - Dec. 2017<br>Lab assistant in a Web developing course throughout a semester. Work involved helping students with Wordpress and JavaScript.</p>
+            <h4>Jönköping University</h4>
+            <small class="date">September 2017 - December 2017</small>
+            <p class="small">Lab assistant in a Web developing course throughout a semester. Work involved helping students with Wordpress and JavaScript.</p>
           </div>
         </div>
       </ExpandableSection>
       <ExpandableSection title="Education">
         <div class="small-text">
           <div class="content">
-            <p><b>Jönköping University</b> · 2016 - 2019<br>Bachelor degree in informatics. Specialization in Graphic Design and Web development.</p>
+            <h4>Jönköping University</h4>
+            <small class="date">2016 - 2019</small>
+            <p class="small">Bachelor degree in informatics. Specialization in Graphic Design and Web development.</p>
           </div>
           <div class="content">
-            <p><b>Chalmers University of Technology</b> · 2014 - 2016<br>Software engineering. Programming primarily with Java, but also Assembler and C.</p>
+            <h4>Chalmers University of Technology</h4>
+            <small class="date">2014 - 2016</small>
+            <p class="small">Software engineering. Programming primarily with Java, but also Assembler and C.</p>
           </div>
           <div class="content">
-            <p><b>Lerums Gymnasium</b> · 2010 - 2013<br>Studied a Media Technology program. My first introduction to Adobe collection and web development.</p>
+            <h4>Lerums Gymnasium</h4>
+            <small class="date">2010 - 2013</small>
+            <p class="small">Studied a Media Technology program. My first introduction to Adobe collection and web development.</p>
           </div>
         </div>
       </ExpandableSection>
@@ -162,11 +180,37 @@ import RoundPicture from '../components/RoundPicture.vue'
   }
 
   .content {
+    padding: 0 0.5rem 1rem 1.5rem;
     margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-expandable-content);
+
+    &:last-child {
+      margin-bottom: 1rem;
+      border-bottom: none;
+    }
+  }
+
+  .content small {
+    display: inline-block;
+    font-size: 1em;
+    margin-bottom: .5rem;
 
     &:last-child {
       margin-bottom: 0;
     }
+
+  }
+
+  .content .date {
+    margin-bottom: 1rem;
+  }
+
+  .content h4 {
+    margin-bottom: 0;
+  }
+
+  .content p.small {
+    font-size: 1em;
   }
 
   .small-text p {
