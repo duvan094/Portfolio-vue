@@ -2,7 +2,7 @@
   <section class="main-section">
     <div class="inner-section">
       <div class="profile">
-        <RoundPicture imageLink="profile.jpg" altText="Profile picture of me"/>
+        <RoundPicture imageLink="profile.jpeg" altText="Profile picture of me"/>
       </div>
       <div>
         <h1 tabindex="-1" id="about-me" class="animate-text">
