@@ -134,10 +134,16 @@ section {
 
 
 section > .inner-section {
-    padding: 0 2rem;
+    padding: 0 1.5rem;
     width: 100%;
     max-width: 720px;
     margin: auto;
+}
+
+@media (min-width: 720px) {
+  section > .inner-section {
+    padding: 0 2rem;
+  } 
 }
 
 section:last-child {

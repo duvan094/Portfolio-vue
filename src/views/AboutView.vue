@@ -3,6 +3,12 @@
     <div class="inner-section">
       <div class="profile">
         <RoundPicture imageLink="profile.jpeg" altText="Profile picture of me"/>
+        <div class="emojis">
+          <span>🌱</span>
+          <span>🍺</span>
+          <span>📷</span>
+          <span>☕</span>
+        </div>
       </div>
       <div>
         <h1 tabindex="-1" id="about-me" class="animate-text">
@@ -169,6 +175,69 @@ import RoundPicture from '../components/RoundPicture.vue'
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  .emojis {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+    filter: grayscale(0.5);
+    opacity: 0.6;
+    font-size: 2rem;
+    width: 100%;
+    height: calc(100% + 4rem);
+    pointer-events: none;
+  }
+
+  .emojis span {
+    animation-duration: 6s;
+    animation-name: flowing-emojis;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  .emojis span:nth-child(2) {
+    animation-delay: 1s;
+  }
+
+  .emojis span:nth-child(3) {
+    animation-delay: 2s;
+  }
+
+  .emojis span:nth-child(2) {
+    animation-delay: 3s;
+  }
+
+  .emojis span:nth-child(4) {
+    animation-delay: 4s;
+  }
+
+  .emojis span:nth-child(5) {
+    animation-delay: 5s;
+  }
+
+  @keyframes flowing-emojis {
+    0% {
+      opacity: 0;
+      top: 100%;
+    }
+
+    10% {
+      opacity: 100%;
+    }
+
+    90% {
+      opacity: 100%;
+    }
+
+    100% {
+      opacity: 0;
+      top: 0;
     }
   }
 
