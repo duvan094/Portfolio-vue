@@ -199,6 +199,7 @@ import RoundPicture from '../components/RoundPicture.vue'
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     opacity: 0;    
+    transform: scale(0.8);
   }
 
   .emojis span:nth-child(2) {
@@ -220,20 +221,26 @@ import RoundPicture from '../components/RoundPicture.vue'
   @keyframes flowing-emojis {
     0% {
       opacity: 0;
+      transform: scale(0.8);
       top: 100%;
+      transform-origin: center bottom;
     }
 
     10% {
       opacity: 100%;
+      transform: scale(1);
     }
 
     90% {
       opacity: 100%;
+      transform: scale(1);
     }
 
     100% {
       opacity: 0;
       top: 0;
+      transform: scale(0.8);
+      transform-origin: center top;
     }
   }
 
