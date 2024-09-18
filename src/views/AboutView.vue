@@ -198,27 +198,23 @@ import RoundPicture from '../components/RoundPicture.vue'
     animation-name: flowing-emojis;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    opacity: 0;
-  }
-
-  .emojis span:nth-child(2) {
-    animation-delay: 1s;
-  }
-
-  .emojis span:nth-child(3) {
-    animation-delay: 2s;
+    opacity: 0;    
   }
 
   .emojis span:nth-child(2) {
     animation-delay: 3s;
   }
 
+  .emojis span:nth-child(3) {
+    animation-delay: 1.5s;
+  }
+
   .emojis span:nth-child(4) {
-    animation-delay: 4s;
+    animation-delay: 4.5s;
   }
 
   .emojis span:nth-child(5) {
-    animation-delay: 5s;
+    animation-delay: 6s;
   }
 
   @keyframes flowing-emojis {
