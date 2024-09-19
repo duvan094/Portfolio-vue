@@ -124,7 +124,7 @@
             <p>Feel free to send me a message, I'll reply as soon as possible.</p>
             <form @submit.prevent="sendEmail" class="form" :class="{'sending': sending, 'emailSent': emailSent}">
                 <div class="input-field" :class="{'error': nameError}">
-                    <label for="message">Name</label>
+                    <label for="name">Name</label>
                     <input type="text" :disabled="emailSent" maxlength="40" id="name" name="name" placeholder="ex. Jacob Duvander" v-model="name" @input="clearError('name')"/>
                 </div>
                 <div class="input-field" :class="{'error': emailError}">
