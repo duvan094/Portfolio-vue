@@ -5,7 +5,7 @@
     </div>
     <div class="menu" :class="{'visible': menuToggled}">
       <nav>
-        <RouterLink tabindex="0" @click="this.menuToggled = false" to="/">Home</RouterLink>
+        <RouterLink tabindex="0" @click="this.menuToggled = false" to="/">Home / Projects</RouterLink>
         <RouterLink tabindex="0" @click="this.menuToggled = false" to="/about">About me</RouterLink>
       </nav>
       <div class="background"></div>

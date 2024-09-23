@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div tabindex="-1" ref="skipLink" class="skip-link-wrapper">
-            <a :href="scrollId" tabindex="0" class="skip-link" ref="link" @click="scrollDown">Scroll to Content</a>
+            <a :href="scrollId" tabindex="0" class="skip-link">Scroll to Content</a>
         </div>
     </div>
 </template>
